@@ -3,7 +3,7 @@
 namespace App\Livewire\Kegiatan;
 
 use Livewire\Component;
-use App\Models\kegiatan;
+use App\Models\Kegiatan;
 use Jantinnerezo\LivewireAlert\Facades\LivewireAlert;
 
 
