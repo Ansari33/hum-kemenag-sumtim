@@ -66,9 +66,9 @@ new class extends Component {
   
   <div class="col-lg-12 row gy-2">
 <div class="col-md">
-  <div class="card shadow-none bg-label-warning">
-    <div class="card-body text-warning">
-      <h5 class="card-title text-warning">0</h5>
+  <div class="card shadow-none bg-label-white">
+    <div class="card-body text-black">
+      <h5 class="card-title text-black">0</h5>
       <p class="card-text">
         Mengajukan Permintaan Nomor
       </p>
@@ -77,9 +77,9 @@ new class extends Component {
 </div>
 
 <div class="col-md">
-  <div class="card shadow-none bg-label-success">
-    <div class="card-body text-success">
-      <h5 class="card-title text-success">0</h5>
+  <div class="card shadow-none bg-label-secondary">
+    <div class="card-body text-black">
+      <h5 class="card-title text-black">0</h5>
       <p class="card-text">
         Pengajuan Diterima
       </p>
