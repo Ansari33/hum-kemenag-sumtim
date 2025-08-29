@@ -15,13 +15,17 @@ new #[Layout('components.layouts.auth')] class extends Component {
     public string $password = '';
     public string $nip = '';
     public string $password_confirmation = '';
-    public bool $terms = false;
+    public bool $terms = true;
+
+    public string $typePassword = 'password';
+    public string $cls = 'bx-hide';
 
     /**
      * Handle an incoming registration request.
      */
     public function register(): void
     {
+        
         $validated = $this->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
@@ -46,6 +50,12 @@ new #[Layout('components.layouts.auth')] class extends Component {
     public function cekNip($nip){
        return Pegawai::where('nip',$nip)->first();
     }
+
+    public function showPassword(){
+        $this->typePassword = $this->typePassword == 'password' ? 'text' : 'password'; 
+        $this->cls = $this->cls == 'bx-show' ? 'bx-hide' : 'bx-show'; 
+    }
+
 }; ?>
 
 @section('title', 'Register Page')
@@ -57,8 +67,8 @@ new #[Layout('components.layouts.auth')] class extends Component {
 @endsection
 
 <div>
-    <h4 class="mb-1">{{ __('Adventure starts here') }} 🚀</h4>
-    <p class="mb-6">{{ __('Make your app management easy and fun!') }}</p>
+    <h4 class="mb-1">{{ __('Registrasi Akun') }} 🚀</h4>
+    <p class="mb-6">{{ __('Silahkan Registrasikan Akun Anda!') }}</p>
 
     <!-- Session Status -->
     @if (session('status'))
@@ -122,14 +132,14 @@ new #[Layout('components.layouts.auth')] class extends Component {
             <div class="input-group input-group-merge">
                 <input
                     wire:model="password"
-                    type="password"
+                    type="{{ $typePassword }}"
                     class="form-control @error('password') is-invalid @enderror"
                     id="password"
                     required
                     autocomplete="new-password"
                     placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                 >
-                <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                <span class="input-group-text cursor-pointer" wire:click="showPassword"><i class="bx {{ $cls }}"></i></span>
                 @error('password')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
@@ -141,21 +151,21 @@ new #[Layout('components.layouts.auth')] class extends Component {
             <div class="input-group input-group-merge">
                 <input
                     wire:model="password_confirmation"
-                    type="password"
+                    type="{{ $typePassword }}"
                     class="form-control @error('password_confirmation') is-invalid @enderror"
                     id="password_confirmation"
                     required
                     autocomplete="new-password"
                     placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                 >
-                <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                <span class="input-group-text cursor-pointer" wire:click="showPassword"><i class="bx {{ $cls }}"></i></span>
                 @error('password_confirmation')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
         </div>
 
-        <div class="mb-8">
+        {{-- <div class="mb-8">
             <div class="form-check mb-0 ms-2">
                 <input wire:model="terms" type="checkbox" class="form-check-input @error('terms') is-invalid @enderror" id="terms">
                 <label class="form-check-label" for="terms">
@@ -166,7 +176,7 @@ new #[Layout('components.layouts.auth')] class extends Component {
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
-        </div>
+        </div> --}}
 
         <button type="submit" class="btn btn-primary d-grid w-100 mb-6">
             {{ __('Sign up') }}
@@ -174,9 +184,9 @@ new #[Layout('components.layouts.auth')] class extends Component {
     </form>
 
     <p class="text-center">
-        <span>{{ __('Already have an account?') }}</span>
+        <span>{{ __('Telah Mendaftar?') }}</span>
         <a href="{{ route('login') }}" wire:navigate>
-            <span>{{ __('Sign in instead') }}</span>
+            <span>{{ __('Langsung Login') }}</span>
         </a>
     </p>
 </div>
