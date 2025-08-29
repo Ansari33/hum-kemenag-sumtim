@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('kegiatan');
             $table->string('uraian_kegiatan');
             $table->string('volume');
-
+            $table->integer('bulan');
+            $table->integer('tahun');
             $table->timestamps();
         });
     }

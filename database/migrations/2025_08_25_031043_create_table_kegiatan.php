@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('status');
             $table->string('facebook');
             $table->string('instagram');
+            $table->string('berita');
             $table->string('arsip');
             $table->timestamps();
         });
