@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('nomor_surats', function (Blueprint $table) {
             $table->id();
-            $table->integer('permintaan_id');
+            $table->integer('pengajuan_id');
             $table->integer('nomor');
             $table->timestamps();
         });
