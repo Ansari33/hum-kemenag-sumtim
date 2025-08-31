@@ -23,6 +23,11 @@ class Add extends Component
         return view('livewire.laporan-kinerja.add',compact('tugas'));
     }
 
+    public function mount()  {
+        $this->bulan = intval(date('m'));
+        $this->tahun = date('Y');
+    }
+
     public function submit()
     {
         DB::beginTransaction();

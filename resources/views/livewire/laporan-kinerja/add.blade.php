@@ -64,7 +64,7 @@
        <div class="mb-4 row">
           <label for="html5-search-input" class="col-md-2 col-form-label">Tahun</label>
           <div class="col-md-10">
-            <input  wire:model="tahun" require class="form-control"   type="number" />
+            <input  wire:model="tahun" require class="form-control"   type="number"  />
           </div>
         </div>
         <button type="submit" class="btn  me-2 btn-primary" >Simpan </button>

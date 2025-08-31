@@ -2,12 +2,46 @@
 <div>
     <div class="card">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-2">
                 <h5 class="card-header">Laporan Kinerja</h5>
             </div>
-
             <div class="col-lg-3 mt-5">
-                <input placeholser="cari..." wire:model="search" class="form-control" wire:keydown="searchData" />
+                 <select name="pengaju" wire:model="atas" require class="form-select "  aria-label="Default select example">
+                    <option selected>Pilih Atasan</option>
+                    @foreach($atasan as $ats => $a)
+                    <option value="{{ $a->id }}" >{{ $a->nama }}</option>
+                    @endforeach
+                </select>
+                
+            </div>
+             <div class="col-lg-1 mt-5">
+                 <select name="pengaju" wire:change="searchData" wire:model="bulan" require class="form-select " id="exampleFormControlSelect1" aria-label="Default select example">
+                    <option selected>Bulan</option>
+                    <option value="1" >Januari</option>
+                    <option value="2" >Februari</option>
+                    <option value="3">Maret</option>
+                    <option value="4">April</option>
+                    <option value="5" >Mei</option>
+                    <option value="6" >Juni</option>
+                    <option value="7" >Juli</option>
+                    <option value="8" >Agustus</option>
+                    <option value="9" >September</option>
+                    <option value="10" >Oktober</option>
+                    <option value="11" >November</option>
+                    <option value="12" >Desember</option>
+                </select>
+                
+            </div>
+             <div class="col-lg-1 mt-5">
+                 <input placeholser="Tahun" wire:model="tahun" wire:keydown="searchData" class="form-control"  />
+                
+            </div>
+            <div class="col-lg-2 mt-5">
+                <a class="btn btn-danger text-white ml-4"  wire:click="pdf">{{ __('PDF') }}</a>
+                <button class="btn btn-success text-white ml-4"  wire:click="excel">{{ __('Excel') }}</button>
+            </div>
+            <div class="col-lg-2 mt-5">
+                <input placeholder="cari..." wire:model="search" class="form-control" wire:model.live="selectedCity" wire:keydown="searchData" />
             </div>
             <div class="col-lg-1 mt-5">
                 <a class="btn btn-primary ml-4" href="{{ route('laporan-kinerja.add') }}" wire:navigate>{{ __('Baru') }}</a>
