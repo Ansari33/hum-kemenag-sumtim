@@ -7,7 +7,7 @@
             </div>
             <div class="col-lg-2 mt-5">
                  <select name="pengaju" wire:model="atas" wire:change="searchData" require class="form-select "  aria-label="Default select example">
-                    <option selected>Pilih Atasan</option>
+                    <option value="{{ null }}" selected>Pilih Atasan</option>
                     @foreach($atasan as $ats => $a)
                     <option value="{{ $a->id }}" >{{ $a->nama }}</option>
                     @endforeach
@@ -16,7 +16,7 @@
             </div>
              <div class="col-lg-1 mt-5">
                  <select name="pengaju" wire:change="searchData" wire:model="bulan" require class="form-select " id="exampleFormControlSelect1" aria-label="Default select example">
-                    <option selected>Bulan</option>
+                    <option  selected>Bulan</option>
                     <option value="1" >Januari</option>
                     <option value="2" >Februari</option>
                     <option value="3">Maret</option>
@@ -37,7 +37,7 @@
                 
             </div>
             <div class="col-lg-3 mt-5">
-                <a class="btn btn-danger text-white ml-4" target="_blank"  href="/laporan-kinerja/pdf/{{$bulan}}/{{ $tahun }}/{{ $atas }}">{{ __('PDF') }}</a>
+                <a class="btn btn-danger text-white ml-4" wire:click="pdf">{{ __('PDF') }}</a>
                 <button class="btn btn-success text-white ml-4"   wire:click="excel">{{ __('Excel') }}</button>
             </div>
             <div class="col-lg-2 mt-5">

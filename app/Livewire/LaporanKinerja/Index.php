@@ -75,4 +75,17 @@ class Index extends Component
         return Excel::download(new LaporanKinerjaExport($this->bulan,$this->tahun), 'laporan kinerja.xlsx');
     }
 
+    public function pdf() {
+         if ($this->bulan == null or $this->bulan == null or $this->atas == null ) {
+           LivewireAlert::title('Parameter Belum Lengkap!')
+            ->warning()
+            ->show();
+            return ;
+        }
+              $this->js("
+            window.open('/laporan-kinerja/pdf/$this->bulan/$this->tahun/$this->atas', '_blank').focus();
+            "); 
+        
+    }
+
 }
