@@ -8,8 +8,9 @@
   </div>
 
   <div class="navbar-nav-right d-flex align-items-center justify-content-end" id="navbar-collapse">
-    <!-- Search -->
-    <div class="navbar-nav align-items-center me-auto">
+  <h6 class="navbar-nav align-items-center">Kantor Kementerian Agama Kabupaten Sumba Timur</h6>  
+  <!-- Search -->
+    <!-- <div class="navbar-nav align-items-center me-auto">
       <div class="nav-item d-flex align-items-center">
         <span class="w-px-22 h-px-22"><i class="icon-base bx bx-search icon-md"></i></span>
         <input
@@ -18,7 +19,7 @@
           placeholder="Search..."
           aria-label="Search..." />
       </div>
-    </div>
+    </div> -->
     <!-- /Search -->
 
     <ul class="navbar-nav flex-row align-items-center ms-md-auto">

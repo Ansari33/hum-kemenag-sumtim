@@ -5,8 +5,8 @@
             <div class="col-lg-2">
                 <h5 class="card-header">Laporan Kinerja</h5>
             </div>
-            <div class="col-lg-3 mt-5">
-                 <select name="pengaju" wire:model="atas" require class="form-select "  aria-label="Default select example">
+            <div class="col-lg-2 mt-5">
+                 <select name="pengaju" wire:model="atas" wire:change="searchData" require class="form-select "  aria-label="Default select example">
                     <option selected>Pilih Atasan</option>
                     @foreach($atasan as $ats => $a)
                     <option value="{{ $a->id }}" >{{ $a->nama }}</option>
@@ -36,9 +36,9 @@
                  <input placeholser="Tahun" wire:model="tahun" wire:keydown="searchData" class="form-control"  />
                 
             </div>
-            <div class="col-lg-2 mt-5">
-                <a class="btn btn-danger text-white ml-4"  wire:click="pdf">{{ __('PDF') }}</a>
-                <button class="btn btn-success text-white ml-4"  wire:click="excel">{{ __('Excel') }}</button>
+            <div class="col-lg-3 mt-5">
+                <a class="btn btn-danger text-white ml-4" target="_blank"  href="/laporan-kinerja/pdf/{{$bulan}}/{{ $tahun }}/{{ $atas }}">{{ __('PDF') }}</a>
+                <button class="btn btn-success text-white ml-4"   wire:click="excel">{{ __('Excel') }}</button>
             </div>
             <div class="col-lg-2 mt-5">
                 <input placeholder="cari..." wire:model="search" class="form-control" wire:model.live="selectedCity" wire:keydown="searchData" />

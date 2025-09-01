@@ -30,6 +30,7 @@
             <th>Unit Kerja</th>
             <th>Actions</th>
           </tr>
+          
         </thead>
         <tbody class="table-border-bottom-0">
           @foreach($data as $perm => $p )

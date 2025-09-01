@@ -9,6 +9,7 @@ use Livewire\WithPagination;
 use Jantinnerezo\LivewireAlert\Facades\LivewireAlert;
 use App\Exports\LaporanKinerjaExport;
 use Maatwebsite\Excel\Facades\Excel;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class Index extends Component
 {
@@ -17,6 +18,7 @@ class Index extends Component
     public $atas;
     public $bulan;
     public $tahun;
+   // public $atasan;
 
     public function render()
     {
@@ -31,6 +33,11 @@ class Index extends Component
         $data = $data->where('nip',auth()->user()->nip)->paginate(15);
         $atasan = Pegawai::select(['id','nama'])->whereNotIn('pangkat_gol',['V','IX'])->get();
         return view('livewire.laporan-kinerja.index',compact('data','atasan'));
+    }
+
+    public function mount() {
+        $this->bulan = intval(date('m'));
+        $this->tahun = date('Y');        
     }
 
     public function searchData(){
@@ -63,6 +70,12 @@ class Index extends Component
     }
 
     public function pdf(){
-        return Excel::download(new LaporanKinerjaExport, 'Laporan Kinerja.pdf',\Maatwebsite\Excel\Excel::DOMPDF);
+      $data = LaporanKinerja::where('nip',auth()->user()->nip)
+      ->where('bulan',$this->bulan)
+      ->where('tahun',$this->tahun)
+      ->get()->toArray();
+
+    $pdf = Pdf::loadView('livewire.laporan-kinerja.pdf', $data);
+     return $pdf->download('invoice.pdf');
     }
 }

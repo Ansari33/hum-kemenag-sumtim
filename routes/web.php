@@ -8,6 +8,7 @@ use App\Http\Controllers\NomorSuratController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DataInformasiController;
 use App\Http\Controllers\KegiatanController;
+use App\Models\Pegawai;
 
 Route::get('/', function () { return view('welcome');})->name('home');
 Route::middleware(['auth', 'verified'])->group(function () {
@@ -50,7 +51,9 @@ Route::middleware(['auth', 'verified'])->prefix('laporan-kinerja')->group(functi
   Volt::route('add', 'laporan-kinerja.add')->name('laporan-kinerja.add');
   Volt::route('edit/{id}', 'laporan-kinerja.edit')->name('laporan-kinerja.edit');
 //  Route::get('/delete/{id}', [laporan-kinerjaController::class, 'delete'])->name('kegitatan.delete');
-  Volt::route('/search', 'laporan-kinerja.search')->name('laporan-kinerja.search');    
+  Volt::route('/search', 'laporan-kinerja.search')->name('laporan-kinerja.search'); 
+  Route::get('/pdf/{b}/{t}/{a}', [PegawaiController::class, 'pdf'])->name('laporan-kinerja.pdf');
+   
 });
 
 Route::middleware(['auth', 'verified'])->prefix('data-informasi')->group(function () {
