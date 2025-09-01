@@ -90,7 +90,7 @@
     <table>
         <tr>
             <td></td>
-            <td > <span style="margin-left: 80px;">Waingapu, {{ date('d').' '.ucwords(strtolower($bulanStr[intval(date('m'))])).' '.date('Y')}}</span></td>
+            <td > <span style="margin-left: 120px;">Waingapu, {{ date('d').' '.ucwords(strtolower($bulanStr[intval(date('m'))])).' '.date('Y')}}</span></td>
         </tr>
         <tr>
             <td>Mengetahui</td>
@@ -102,7 +102,7 @@
                 Kantor Kementerian Agama <br>
                 Kab. Sumba Timur
             </td>
-            <td>Pegawai</td>
+            <td> <span style="margin-left: 100px;"> Pegawai </span></td>
         </tr>
         <tr>
             <td></td>
@@ -117,8 +117,8 @@
                 Nip. {{$atasan->nip}}
             </td>
             <td>
-                <u>{{$pegawai->nama}}</u><br>
-                Nip. {{$pegawai->nip}}
+                <u><span style="margin-left: 80px;">{{$pegawai->nama}}</span></u><br>
+                <span style="margin-left: 80px;">Nip. {{$pegawai->nip}} </span>
             </td>
         </tr>
     </table>
