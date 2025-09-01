@@ -66,16 +66,13 @@ class Index extends Component
     }
 
     public function excel(){
-        return Excel::download(new LaporanKinerjaExport, 'users.xlsx');
+        $data = LaporanKinerja::where('nip',auth()->user()->nip)
+        ->where('bulan',$this->bulan)
+        ->where('tahun',$this->tahun)
+        ->get()->pluck(['tanggal','kegiatan','uraian_kegiatan']);
+        $parameter = ['bulan' => $this->bulan];
+       // dd($data);
+        return Excel::download(new LaporanKinerjaExport($this->bulan,$this->tahun), 'laporan kinerja.xlsx');
     }
 
-    public function pdf(){
-      $data = LaporanKinerja::where('nip',auth()->user()->nip)
-      ->where('bulan',$this->bulan)
-      ->where('tahun',$this->tahun)
-      ->get()->toArray();
-
-    $pdf = Pdf::loadView('livewire.laporan-kinerja.pdf', $data);
-     return $pdf->download('invoice.pdf');
-    }
 }

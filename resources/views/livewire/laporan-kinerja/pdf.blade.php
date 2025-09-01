@@ -1,18 +1,5 @@
 <?php
-$bulanStr = [
-    "1" => 'JANUARI',
-    "2" => 'FEBRUARI',
-    "3" => 'MARET',
-    "4" => 'APRIL',
-    "5" => 'MEI',
-    "6" => 'JUNI',
-    "7" => 'JULI',
-    "8" => 'AGUSTUS',
-    "9" => 'SEPTEMBER',
-    "10" => 'OKTOBER',
-    "11" => 'NOVEMBER',
-    "12" => 'DESEMBER',
-]
+
 ?>
 
 
@@ -103,13 +90,13 @@ $bulanStr = [
     <table>
         <tr>
             <td></td>
-            <td>Waingapu, {{ date('d').' '.ucwords(strtolower($bulanStr[intval(date('m'))])).' '.date('Y')}}</td>
+            <td > <span style="margin-left: 80px;">Waingapu, {{ date('d').' '.ucwords(strtolower($bulanStr[intval(date('m'))])).' '.date('Y')}}</span></td>
         </tr>
         <tr>
             <td>Mengetahui</td>
             <td></td>
         </tr>
-       
+
         <tr>
             <td>{{$atasan->jabatan}} <br>
                 Kantor Kementerian Agama <br>

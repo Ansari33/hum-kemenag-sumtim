@@ -57,10 +57,24 @@ class PegawaiController extends Controller
             ->get();
         $pegawai = Pegawai::where('nip',auth()->user()->nip)->first();    
         $atasan = Pegawai::find($at); 
+         $bulanStr = [
+            "1" => 'JANUARI',
+            "2" => 'FEBRUARI',
+            "3" => 'MARET',
+            "4" => 'APRIL',
+            "5" => 'MEI',
+            "6" => 'JUNI',
+            "7" => 'JULI',
+            "8" => 'AGUSTUS',
+            "9" => 'SEPTEMBER',
+            "10" => 'OKTOBER',
+            "11" => 'NOVEMBER',
+            "12" => 'DESEMBER',
+        ];
         $pdf = Pdf::loadView('livewire.laporan-kinerja.pdf', [],
         ['bulan' => $bulan,'tahun' => $tahun,
         'pegawai' => $pegawai,'data'=>$data,
-        'atasan' => $atasan
+        'atasan' => $atasan, 'bulanStr' => $bulanStr 
         ]);
         return $pdf->stream('Laporan Kinerja.pdf');
     }
