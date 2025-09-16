@@ -30,7 +30,8 @@ Route::middleware(['auth', 'verified'])->prefix('pegawai')->group(function () {
 });
 
 Route::middleware(['auth', 'verified'])->prefix('nomor-surat')->group(function () {
-    Route::get('/', [NomorSuratController::class, 'index'])->name('nomor-surat');
+    Volt::route('/', 'nomor-surat.index')->name('nomor-surat');
+    //Route::get('/', [NomorSuratController::class, 'index'])->name('nomor-surat');
     Route::get('/add', [NomorSuratController::class, 'add'])->name('nomor-surat.add');  
     Route::post('/store', [NomorSuratController::class, 'store'])->name('nomor-surat.store');     
     Route::get('/edit/{id}', [NomorSuratController::class, 'edit'])->name('nomor-surat.edit');

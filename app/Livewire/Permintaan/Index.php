@@ -16,6 +16,7 @@ class Index extends Component
     {
         $data = Permintaan::with(['pegawai'])
             ->where('nomor', 'like', '%' . $this->search . '%')
+            ->orWhere('perihal', 'like', '%' . $this->search . '%')
             ->paginate(15);
         return view('livewire.permintaan.index', compact('data'));
     }

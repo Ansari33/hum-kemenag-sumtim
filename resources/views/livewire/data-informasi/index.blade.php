@@ -23,7 +23,7 @@
       <table class="table">
         <thead>
           <tr>
-            <th>#</th>
+            <th>Nomor</th>
             <th>Nama Data</th>
             <th>Link Data</th>
             <th>Actions</th>
