@@ -71,6 +71,13 @@ Route::middleware(['auth', 'verified'])->prefix('tugas')->group(function () {
 //  Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('tugas.delete');    
 });
 
+Route::middleware(['auth', 'verified'])->prefix('inventories')->group(function () {
+  Volt::route('/', 'inventory.index')->name('inventories');
+  Volt::route('add', 'inventory.add')->name('inventories.add');
+  Volt::route('edit/{id}', 'inventory.edit')->name('inventories.edit');
+//  Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('tugas.delete');    
+});
+
 Route::middleware(['auth', 'verified'])->prefix('user')->group(function () {
   Route::get('/', [UserController::class, 'index'])->name('user');
   // Route::get('/add', [PegawaiController::class, 'add'])->name('nomor-surat.add');  

@@ -5,15 +5,18 @@ namespace App\Livewire\Pegawai;
 use Livewire\Component;
 use App\Models\Pegawai;
 use Jantinnerezo\LivewireAlert\Facades\LivewireAlert;
+use Livewire\WithFileUploads;
 
 class Edit extends Component
 {
+    use WithFileUploads;
     public $data;
     public $nama;
     public $nip;
     public $pangkat;
     public $jabatan;
     public $unit_kerja;
+    public $gambar;
 
     public function render()
     {

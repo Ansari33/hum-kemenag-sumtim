@@ -35,6 +35,10 @@
     <li class="menu-item {{ request()->is('tugas*') ? 'active' : '' }}">
       <a class="menu-link" href="{{ route('tugas') }}" wire:navigate> <i class="menu-icon tf-icons bx bx-list-ul"></i>{{ __('Tugas Kegiatan') }}</a>
     </li>
+
+    <li class="menu-item {{ request()->is('inventories*') ? 'active' : '' }}">
+      <a class="menu-link" href="{{ route('inventories') }}" wire:navigate> <i class="menu-icon tf-icons bx bx-box"></i>{{ __('Belanja Inventori') }}</a>
+    </li>
     
     @if(auth()->user()->hasRole('admin'))
     <li class="menu-item {{ request()->is('user*') ? 'active' : '' }}">

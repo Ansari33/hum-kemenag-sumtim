@@ -2,15 +2,23 @@
 <div>
     <div class="card mb-1">
         <h5 class="card-header">Update Data Pegawai</h5>
+        @if($gambar)<img src="{{ $gambar->temporaryUrl() }}" width="60px" alt=""> @endif
     </div>
     <div class="card p-4"> 
       <form  wire:submit.prevent="update">
+        <div class="mb-4 row">
+          <label for="html5-text-input" class="col-md-2 col-form-label">Foto</label>
+          <div class="col-md-10">
+            <input name="nama" wire:model="gambar" class="form-control" type="file"  />
+          </div>
+        </div>
         <div class="mb-4 row">
           <label for="html5-text-input" class="col-md-2 col-form-label">Nama</label>
           <div class="col-md-10">
             <input name="nama" wire:model="nama" class="form-control" type="text" value="{{ $data['nama'] }}" id="html5-text-input" />
           </div>
         </div>
+
         <div class="mb-4 row">
           <label for="html5-search-input" class="col-md-2 col-form-label">NIP</label>
           <div class="col-md-10">
