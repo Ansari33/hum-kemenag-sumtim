@@ -2,8 +2,9 @@
 <div>
     <div class="card mb-1">
         <h5 class="card-header">Permintaan Nomor Surat</h5>
+        <!-- <button type="button" class="btn  me-2 btn-primary" wire:click="brod" >Lempar </button> -->
     </div>
-    <div class="card p-4">
+    <div class="card p-4"> 
         @if (session()->has('error'))
             <div class="alert alert-danger">
                 {{ session('error') }}

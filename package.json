@@ -26,6 +26,8 @@
     "@rollup/plugin-html": "^2.0.0",
     "bootstrap": "~5.3.3",
     "glob": "^10.4.5",
+    "laravel-echo": "^2.2.4",
+    "pusher-js": "^8.4.0",
     "sass": "1.76.0",
     "sass-loader": "~14.0.0"
   },

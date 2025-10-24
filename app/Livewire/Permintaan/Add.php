@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Permintaan;
 
+use App\Events\PengajuanNomor;
 use Livewire\Component;
 use App\Models\Pegawai;
 use Illuminate\Http\Request;
@@ -11,6 +12,8 @@ use App\Models\NomorSurat;
 use Livewire\Attributes\On;
 use Livewire\WithFileUploads;
 use Jantinnerezo\LivewireAlert\Facades\LivewireAlert;
+use Auth;
+use Spatie\Permission\Models\Role;
 
 class Add extends Component
 {
@@ -54,6 +57,7 @@ class Add extends Component
             LivewireAlert::title('Pengajuan Berhasil Dibuat!')
                 ->success()
                 ->show();
+            event(new PengajuanNomor(auth()->user()->name.' Mengajukan Permintaan Nomor'));  
             //session()->flash('success', 'Pengajuan Berhasil Dibuat');
             return $this->redirectIntended(route('permintaan', absolute: false), navigate: true);
         } catch (\Exception $e) {
@@ -79,6 +83,10 @@ class Add extends Component
     public function cekNomorPengajuan($pengajuan)
     {
         return NomorSurat::where('pengajuan_id', $pengajuan)->first();
+    }
+
+    public function brod() {
+        event(new PengajuanNomor(auth()->user()->name.' Mengajukan Permintaan Nomor'));
     }
 
     // #[On('post-created')]
