@@ -17,6 +17,8 @@ class Edit extends Component
     public $tanggal = '';
     public $pengaju = '';
     public $status = '';
+    public $kode ='';
+    public $ruangan ='';
 
     public function render()
     {
@@ -31,6 +33,8 @@ class Edit extends Component
         $this->tanggal = $this->data->tanggal;
         $this->pengaju = $this->data->pengaju;
         $this->status = $this->data->status;
+        $this->kode   = explode('(nomor)',$this->nomor)[0];
+        $this->ruangan   = count(explode('(nomor)',$this->nomor)) > 1 ? explode('(nomor)',$this->nomor)[1] : '';
     }
 
     public function update(Request $request)
@@ -41,6 +45,7 @@ class Edit extends Component
             $result->perihal = $this->perihal;
             $result->pengaju = $this->pengaju;
             $result->status = $this->status;
+            $result->nomor = $this->kode.'(nomor)'.$this->ruangan;
             if ($this->status == 'Diterima') {
                 if (!$this->cekNomorPengajuan($this->data->id)) {
                     $this->generateNomor($this->data->id);

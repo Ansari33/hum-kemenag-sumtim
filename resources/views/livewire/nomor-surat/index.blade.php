@@ -21,11 +21,11 @@
     <table class="table">
       <thead>
         <tr>
+          <th>Nomor</th>
+          <th>Pengaju</th>
           <th>Nomor Surat</th>
-          <th>Link Pengajuan</th>
-          <th>Tanggal Pengajuan</th>
-          <th>Actions</th>
-          
+          <th>Tanggal</th>
+          <th>Perihal</th>
         </tr>
       </thead>
       <tbody class="table-border-bottom-0">
@@ -33,36 +33,20 @@
         <tr>
           <td>
             <i class="icon-base fab fa-angular text-danger me-4"></i>
-            <span class="fw-medium">{{ $p->nomor.'/'.$p->pengajuan->nomor }}</span>
+            <span class="fw-medium">{{ $p->nomor}}</span>
           </td>
           <td>
-            <a class="btn btn-outline-info" href="/permintaan/edit/{{ $p->pengajuan_id }}" wire:navigate>
-              <i class="bx bx-link"></i> 
-            </a>
+            {{  $p->pengajuan->pegawai->nama }}
+          </td>
+          
+          <td>
+            {{str_replace('(nomor)',$p->nomor,$p->pengajuan->nomor)}}
           </td>
           <td>
             {{  $p->pengajuan->tanggal }}
           </td>
           <td>
-            <div class="dropdown">
-              <button
-                type="button"
-                class="btn p-0 dropdown-toggle hide-arrow"
-                data-bs-toggle="dropdown">
-                <i class="icon-base bx bx-dots-vertical-rounded"></i>
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="/permintaan/edit/{{$p->id}}"
-                  ><i class="icon-base bx bx-edit-alt me-1"></i>Edit</a
-                >
-                <a class="dropdown-item" wire:click="delete"
-                  wire:confirm="Are you sure you want to delete this post?" 
-                  href="/permintaan/delete/{{$p->id}}"
-                  wire:navigate
-                  ><i class="icon-base bx bx-trash me-1"></i>Delete</a
-                >
-              </div>
-            </div>
+            {{  $p->pengajuan->perihal }}
           </td>
         </tr>
         @endforeach

@@ -14,8 +14,11 @@
         @csrf
         <div class="mb-4 row">
           <label for="html5-text-input" class="col-md-2 col-form-label">Nomor</label>
-          <div class="col-md-10">
-            <input  name="nomor" wire:model="nomor" class="form-control" type="text" value="-" id="html5-text-input" />
+          <div class="col-md-3">
+            <input  name="kode" wire:model="kode" class="form-control" type="text" placeholder="Kode(B-)" />
+          </div>
+          <div class="col-md-7">
+            <input  name="ruangan" wire:model="ruangan" class="form-control" type="text" placeholder="Ruangan(/K.K/00/)" />
           </div>
         </div>
         <div class="mb-4 row">

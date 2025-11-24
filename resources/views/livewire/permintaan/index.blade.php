@@ -38,7 +38,7 @@
                     <tr>
                         <td>
                             <i class="icon-base fab fa-angular text-danger me-4"></i>
-                            <span class="fw-medium badge bg-label-info">{{ $p->nomor }}</span>
+                            <span class="fw-medium badge bg-label-info">{{ $p->nomorSurat != null ? $p->nomorSurat->nomor : '' }}</span>
                         </td>
                         <td>{{ $p->pegawai->nama }}</td>
                         <td>

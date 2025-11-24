@@ -24,6 +24,9 @@ class Add extends Component
     public $tanggal = '';
     public $pengaju = '';
     public $status = '';
+
+    public $kode = '';
+    public $ruangan = '';
     public $file;
     public function render()
     {
@@ -37,6 +40,8 @@ class Add extends Component
         $pengaju = auth()->user()->hasRole('admin') ? $this->pengaju : Auth::user()->nip;
         $status = auth()->user()->hasRole('admin') ? $this->status : 'Mengajukan';
         // Toaster::success('User created!'); //
+
+        $this->nomor = $this->kode.'(nomor)'.$this->ruangan;
         try {
             DB::beginTransaction();
             $data = Permintaan::create([

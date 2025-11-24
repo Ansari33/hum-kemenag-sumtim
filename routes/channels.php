@@ -12,9 +12,5 @@ Broadcast::channel('pengajuan', function () {
 });
 
 Broadcast::channel('admin', function () {
- #  return true;
-    // $admin = Role::where('name','admin')->get()->pluck('id')->toAray();
-    #$admin = Role::where('name','admin')->get()->pluck('id')->toArray();
     return auth()->user()->hasRole('admin');
-    return  in_array($id,$admin);
 });

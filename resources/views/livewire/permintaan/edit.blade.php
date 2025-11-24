@@ -14,14 +14,17 @@
         @csrf
         <div class="mb-4 row">
           <label for="html5-text-input" class="col-md-2 col-form-label">Nomor</label>
-          <div class="col-md-10">
-            <input name="nomor" wire:model="nomor" class="form-control" type="text" value="{{ $data['nomor'] }}" id="html5-text-input" />
+          <div class="col-md-3">
+            <input name="nomor" wire:model="kode" class="form-control" type="text"  />
+          </div>
+          <div class="col-md-7">
+            <input name="nomor" wire:model="ruangan" class="form-control" type="text"  />
           </div>
         </div>
         <div class="mb-4 row">
           <label for="html5-text-input" class="col-md-2 col-form-label">Pengaju</label>
           <div class="col-md-10">
-            <input  class="form-control" type="text" value="{{ $data['pegawai']['nama'] }}" id="html5-text-input" />
+            <input  class="form-control" type="text" value="{{ $data['pegawai']['nama'] }}" id="html5-text-input" disabled/>
             <input name="pengaju" wire:model="pengaju" class="form-control" type="hidden" value="{{ $data['pengaju'] }}" id="html5-text-input" />
           </div>
         </div>

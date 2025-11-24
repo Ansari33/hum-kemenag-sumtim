@@ -14,11 +14,24 @@ class Index extends Component
 
     public function render()
     {
-        $data = Permintaan::with(['pegawai'])
-            ->where('nomor', 'like', '%' . $this->search . '%')
-            ->orWhere('perihal', 'like', '%' . $this->search . '%')
+        
+         $data = Permintaan::with(['pegawai'])
+        ->where(function ($query) { // This starts a grouped set of OR conditions
+                $query->where('nomor', 'like', '%' . $this->search . '%')
+                    ->orWhere('perihal', 'like', '%' . $this->search . '%');
+            })
+        ->orderBy('tanggal','desc')
+        ->paginate(15);
+        if (!(auth()->user()->hasRole('admin'))) {
+            $data = Permintaan::with(['pegawai'])
+            ->where('pengaju',auth()->user()->nip)
+            ->where(function ($query) { // This starts a grouped set of OR conditions
+                  $query->where('nomor', 'like', '%' . $this->search . '%')
+                        ->orWhere('perihal', 'like', '%' . $this->search . '%');
+              })
             ->orderBy('tanggal','desc')
             ->paginate(15);
+        }    
         return view('livewire.permintaan.index', compact('data'));
     }
 
