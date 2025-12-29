@@ -11,12 +11,27 @@
     <li class="menu-item {{ request()->is('dashboard') ? 'active' : '' }}">
       <a class="menu-link" href="{{ route('dashboard') }}" wire:navigate> <i class="menu-icon tf-icons bx bx-home"></i>{{ __('Dashboard') }}</a>
     </li>
-    <li class="menu-item {{ request()->is('permintaan*') ? 'active' : '' }}">
+    <!-- Settings -->
+    <li class="menu-item {{ (request()->is('permintaan*') or request()->is('nomor-surat*')) ? 'active open' : '' }}">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons bx bx-book"></i>
+        <div class="text-truncate">{{ __('Nomor Surat') }}</div>
+      </a>
+      <ul class="menu-sub">
+        <li class="menu-item {{ request()->routeIs('permintaan*') ? 'active' : '' }}">
+          <a class="menu-link" href="{{ route('permintaan') }}" wire:navigate>{{ __('Permintaan') }}</a>
+        </li>
+        <li class="menu-item {{ request()->routeIs('nomor-surat*') ? 'active' : '' }}">
+          <a class="menu-link" href="{{ route('nomor-surat') }}" wire:navigate>{{ __('Nomor Terbit') }}</a>
+        </li>
+      </ul>
+    </li>
+    <!-- <li class="menu-item {{ request()->is('permintaan*') ? 'active' : '' }}">
       <a class="menu-link" href="{{ route('permintaan') }}" wire:navigate> <i class="menu-icon tf-icons bx bx-book"></i>{{ __('Permintaan') }}</a>
     </li>
     <li class="menu-item {{ request()->is('nomor-surat*') ? 'active' : '' }}">
       <a class="menu-link" href="{{ route('nomor-surat') }}" wire:navigate> <i class="menu-icon tf-icons bx bx-book-open"></i>{{ __('Nomor Surat') }}</a>
-    </li>
+    </li> -->
     <li class="menu-item {{ request()->is('pegawai*') ? 'active' : '' }}">
       <a class="menu-link" href="{{ route('pegawai') }}" wire:navigate> <i class="menu-icon tf-icons bx bx-user"></i>{{ __('Pegawai') }}</a>
     </li>
@@ -28,13 +43,28 @@
       <a class="menu-link" href="{{ route('data-informasi') }}" wire:navigate> <i class="menu-icon tf-icons bx bx-file"></i>{{ __('Data & Informasi') }}</a>
     </li>
 
-    <li class="menu-item {{ request()->is('laporan-kinerja*') ? 'active' : '' }}">
+    <li class="menu-item {{ (request()->is('laporan-kinerja*') or request()->is('tugas*')) ? 'active open' : '' }}">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons bx bx-check-double"></i>
+        <div class="text-truncate">{{ __('Kinerja') }}</div>
+      </a>
+      <ul class="menu-sub">
+        <li class="menu-item {{ request()->routeIs('laporan-kinerja*') ? 'active' : '' }}">
+          <a class="menu-link" href="{{ route('laporan-kinerja') }}" wire:navigate>{{ __('Laporan') }}</a>
+        </li>
+        <li class="menu-item {{ request()->routeIs('tugas*') ? 'active' : '' }}">
+          <a class="menu-link" href="{{ route('tugas') }}" wire:navigate>{{ __('Tugas') }}</a>
+        </li>
+      </ul>
+    </li>
+
+    <!-- <li class="menu-item {{ request()->is('laporan-kinerja*') ? 'active' : '' }}">
       <a class="menu-link" href="{{ route('laporan-kinerja') }}" wire:navigate> <i class="menu-icon tf-icons bx bx-check-double"></i>{{ __('Laporan Kinerja') }}</a>
     </li>
 
     <li class="menu-item {{ request()->is('tugas*') ? 'active' : '' }}">
       <a class="menu-link" href="{{ route('tugas') }}" wire:navigate> <i class="menu-icon tf-icons bx bx-list-ul"></i>{{ __('Tugas Kegiatan') }}</a>
-    </li>
+    </li> -->
 
     <li class="menu-item {{ request()->is('inventories*') ? 'active' : '' }}">
       <a class="menu-link" href="{{ route('inventories') }}" wire:navigate> <i class="menu-icon tf-icons bx bx-box"></i>{{ __('Belanja Inventori') }}</a>
