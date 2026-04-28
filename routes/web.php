@@ -8,9 +8,33 @@ use App\Http\Controllers\NomorSuratController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DataInformasiController;
 use App\Http\Controllers\KegiatanController;
+use App\Models\Kecamatan;
 use App\Models\Pegawai;
 
-Route::get('/', function () { return view('welcome');})->name('home');
+Route::get('/', function () { return view('landing.beranda');})->name('landing');
+
+Route::prefix('profil')->group(function () {
+  Route::get('/sejarah', function () { return view('landing.sejarah');})->name('sejarah');
+  Route::get('/visi-misi', function () { return view('landing.visi-misi');})->name('visi-misi');
+  Route::get('/tugas-fungsi', function () { return view('landing.tugas-fungsi');})->name('tugas-fungsi');
+});
+
+Route::get('/unit-kerja', function () { return view('landing.unit-kerja');})->name('unit-kerja');
+Route::get('/berita', function () { return view('landing.berita');})->name('berita');
+
+Route::prefix('informasi')->group(function () {
+  Route::get('/data-keagamaan', function () { return view('landing.data-keagamaan');})->name('data-keagamaan');
+  Route::get('/data-pendidikan', function () { return view('landing.data-pendidikan');})->name('data-pendidikan');
+ // Route::get('/tugas-fungsi', function () { return view('landing.tugas-fungsi');})->name('tugas-fungsi');
+});
+
+Route::prefix('zi')->group(function () {
+  Route::get('/manajemen-perubahan', function () { return view('landing.manajemen-perubahan');})->name('manajemen-perubahan');
+  Route::get('/data-pendidikan', function () { return view('landing.data-pendidikan');})->name('data-pendidikan');
+ // Route::get('/tugas-fungsi', function () { return view('landing.tugas-fungsi');})->name('tugas-fungsi');
+});
+
+Route::get('/admin', function () { return view('welcome');})->name('admin');
 Route::middleware(['auth', 'verified'])->group(function () {
   Volt::route('dashboard', 'dashboard')->name('dashboard');
 });
@@ -26,7 +50,8 @@ Route::middleware(['auth', 'verified'])->prefix('pegawai')->group(function () {
     Volt::route('/', 'pegawai.index')->name('pegawai');
     Volt::route('add', 'pegawai.add')->name('pegawai.add');  
     Volt::route('edit/{id}', 'pegawai.edit')->name('pegawai.edit'); 
-    Route::get('/delete/{id}', [PegawaiController::class, 'delete'])->name('pegawai.delete');    
+    Route::get('/delete/{id}', [PegawaiController::class, 'delete'])->name('pegawai.delete');
+    Volt::route('import', 'pegawai.import')->name('pegawai.import');      
 });
 
 Route::middleware(['auth', 'verified'])->prefix('nomor-surat')->group(function () {
@@ -98,6 +123,10 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/migrate', function () {
   Artisan::call('cache:clear');
   Artisan::call('migrate');
+});
+
+Route::get('/kecamatan', function () {
+  return Kecamatan::get();
 });
 
 

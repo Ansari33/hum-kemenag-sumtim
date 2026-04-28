@@ -2,10 +2,14 @@
 <div>
   <div class="card">
     <div class="row">
-      <div class="col-lg-8">
+      <div class="col-lg-7">
         <h5 class="card-header">Daftar Pegawai</h5>
       </div>
+      <div class="col-lg-1 mt-5">
+        <a class="btn btn-success ml-4" href="{{ route('pegawai.import') }}" wire:navigate>{{ __('import') }}</a>
+      </div>
       <div class="col-lg-3 mt-5">
+        
         <input placeholser="cari..." wire:model="search" class="form-control" wire:keydown="searchData" />
       </div>
       <div class="col-lg-1 mt-5">
