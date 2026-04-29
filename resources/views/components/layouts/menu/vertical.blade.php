@@ -39,8 +39,53 @@
       <a class="menu-link" href="{{ route('kegiatan') }}" wire:navigate> <i class="menu-icon tf-icons bx bx-calendar"></i>{{ __('Kegiatan') }}</a>
     </li>
 
-    <li class="menu-item {{ request()->is('data-informasi*') ? 'active' : '' }}">
+    <!-- <li class="menu-item {{ request()->is('data-informasi*') ? 'active' : '' }}">
       <a class="menu-link" href="{{ route('data-informasi') }}" wire:navigate> <i class="menu-icon tf-icons bx bx-file"></i>{{ __('Data & Informasi') }}</a>
+    </li> -->
+
+    <li class="menu-item {{ (request()->is('publikasi*') or request()->is('publikasi*')) ? 'active open' : '' }}">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons bx bx-chart"></i>
+        <div class="text-truncate">{{ __('Publikasi') }}</div>
+      </a>
+      <ul class="menu-sub">
+        <li class="menu-item {{ request()->routeIs('konten*') ? 'active' : '' }}">
+          <a class="menu-link" href="{{ route('konten') }}" wire:navigate>{{ __('Konten') }}</a>
+        </li>
+        <li class="menu-item {{ request()->routeIs('tugas*') ? 'active' : '' }}">
+          <a class="menu-link" href="{{ route('tugas') }}" wire:navigate>{{ __('Berita') }}</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="menu-item {{ (request()->is('data*') or request()->is('data*')) ? 'active open' : '' }}">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons bx bx-chart"></i>
+        <div class="text-truncate">{{ __('Data') }}</div>
+      </a>
+      <ul class="menu-sub">
+        <li class="menu-item {{ request()->routeIs('laporan-kinerja*') ? 'active' : '' }}">
+          <a class="menu-link" href="{{ route('laporan-kinerja') }}" wire:navigate>{{ __('Keagamaan') }}</a>
+        </li>
+        <li class="menu-item {{ request()->routeIs('tugas*') ? 'active' : '' }}">
+          <a class="menu-link" href="{{ route('tugas') }}" wire:navigate>{{ __('Pendidikan') }}</a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="menu-item {{ (request()->is('zi*') or request()->is('zi*')) ? 'active open' : '' }}">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons bx bx-shield"></i>
+        <div class="text-truncate">{{ __('Zona Integritas') }}</div>
+      </a>
+      <ul class="menu-sub">
+        <li class="menu-item {{ request()->routeIs('laporan-kinerja*') ? 'active' : '' }}">
+          <a class="menu-link" href="{{ route('laporan-kinerja') }}" wire:navigate>{{ __('Keagamaan') }}</a>
+        </li>
+        <li class="menu-item {{ request()->routeIs('tugas*') ? 'active' : '' }}">
+          <a class="menu-link" href="{{ route('tugas') }}" wire:navigate>{{ __('Pendidikan') }}</a>
+        </li>
+      </ul>
     </li>
 
     <li class="menu-item {{ (request()->is('laporan-kinerja*') or request()->is('tugas*')) ? 'active open' : '' }}">

@@ -121,14 +121,14 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link py-3" href="https://preview.keenthemes.com/html/metronic/docs/base/utilities" target="_blank" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+														<a class="menu-link py-3" href="https://flobamorata.kemenag.go.id/" target="_blank" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
 															<span class="menu-icon">
-																<i class="ki-duotone ki-rocket fs-2">
+																<i class="ki-duotone ki-sync fs-2">
 																	<span class="path1"></span>
 																	<span class="path2"></span>
 																</i>
 															</span>
-															<span class="menu-title">Components</span>
+															<span class="menu-title">PTSP</span>
 														</a>
 														<!--end:Menu link-->
 													</div>

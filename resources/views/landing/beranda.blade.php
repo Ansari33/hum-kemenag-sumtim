@@ -1560,13 +1560,15 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Row-->
 											<div class="row g-5 g-xl-9 mb-5 mb-xl-9">
 												<!--begin::Col-->
+												
+												@foreach($konten as $ktn => $kt)
 												<div class="col-sm-2 mb-3 mb-sm-0">
 													<!--begin::Player card-->
 													<div class="m-0">
 														<!--begin::User pic-->
 														<div class="card-rounded position-relative mb-5">
 															<!--begin::Img-->
-															<div class="bgi-position-center bgi-no-repeat bgi-size-cover h-200px card-rounded" style="background-image:url('assets/media/post/Post1.jpeg')"></div>
+															<div class="bgi-position-center bgi-no-repeat bgi-size-cover h-200px card-rounded" style="background-image:url('{{ $kt->file }}')"></div>
 															<!--end::Img-->
 															<!--begin::Play-->
 															<button class="btn btn-icon h-auto w-auto p-0 ms-4 mb-4 position-absolute bottom-0 right-0" data-kt-element="list-play-button">
@@ -1581,119 +1583,9 @@ License: For each use you must have a valid license purchased only from above li
 													</div>
 													<!--end::Player card-->
 												</div>
+												@endforeach
 												<!--end::Col-->
-												<!--begin::Col-->
-												<div class="col-sm-2 mb-3 mb-sm-0">
-													<!--begin::Player card-->
-													<div class="m-0">
-														<!--begin::User pic-->
-														<div class="card-rounded position-relative mb-5">
-															<!--begin::Img-->
-															<div class="bgi-position-center bgi-no-repeat bgi-size-cover h-200px card-rounded" style="background-image:url('assets/media/post/Post2.jpeg')"></div>
-															<!--end::Img-->
-															<!--begin::Play-->
-															<button class="btn btn-icon h-auto w-auto p-0 ms-4 mb-4 position-absolute bottom-0 right-0" data-kt-element="list-play-button">
-																<i class="bi bi-play-fill text-white fs-2x" data-kt-element="list-play-icon"></i>
-																<i class="bi bi-pause-fill text-white fs-2x d-none" data-kt-element="list-pause-icon"></i>
-															</button>
-															<!--end::Play-->
-														</div>
-														<!--end::User pic-->
-														
-													</div>
-													<!--end::Player card-->
-												</div>
-												<!--end::Col-->
-												<!--begin::Col-->
-												<div class="col-sm-2 mb-3 mb-sm-0">
-													<!--begin::Player card-->
-													<div class="m-0">
-														<!--begin::User pic-->
-														<div class="card-rounded position-relative mb-5">
-															<!--begin::Img-->
-															<div class="bgi-position-center bgi-no-repeat bgi-size-cover h-200px card-rounded" style="background-image:url('assets/media/post/Post3.jpeg')"></div>
-															<!--end::Img-->
-															<!--begin::Play-->
-															<button class="btn btn-icon h-auto w-auto p-0 ms-4 mb-4 position-absolute bottom-0 right-0" data-kt-element="list-play-button">
-																<i class="bi bi-play-fill text-white fs-2x" data-kt-element="list-play-icon"></i>
-																<i class="bi bi-pause-fill text-white fs-2x d-none" data-kt-element="list-pause-icon"></i>
-															</button>
-															<!--end::Play-->
-														</div>
-														<!--end::User pic-->
-														<!--begin::Info-->
-														
-														<!--end::Info-->
-													</div>
-													<!--end::Player card-->
-												</div>
-												<!--end::Col-->
-												<!--begin::Col-->
-												<div class="col-sm-2 mb-3 mb-sm-0">
-													<!--begin::Player card-->
-													<div class="m-0">
-														<!--begin::User pic-->
-														<div class="card-rounded position-relative mb-5">
-															<!--begin::Img-->
-															<div class="bgi-position-center bgi-no-repeat bgi-size-cover h-200px card-rounded" style="background-image:url('assets/media/post/Post4.jpeg')"></div>
-															<!--end::Img-->
-															<!--begin::Play-->
-															<button class="btn btn-icon h-auto w-auto p-0 ms-4 mb-4 position-absolute bottom-0 right-0" data-kt-element="list-play-button">
-																<i class="bi bi-play-fill text-white fs-2x" data-kt-element="list-play-icon"></i>
-																<i class="bi bi-pause-fill text-white fs-2x d-none" data-kt-element="list-pause-icon"></i>
-															</button>
-															<!--end::Play-->
-														</div>
-														<!--end::User pic-->
-													
-													</div>
-													<!--end::Player card-->
-												</div>
-												<!--end::Col-->
-                                                <!--begin::Col-->
-												<div class="col-sm-2 mb-3 mb-sm-0">
-													<!--begin::Player card-->
-													<div class="m-0">
-														<!--begin::User pic-->
-														<div class="card-rounded position-relative mb-5">
-															<!--begin::Img-->
-															<div class="bgi-position-center bgi-no-repeat bgi-size-cover h-200px card-rounded" style="background-image:url('assets/media/post/Post1.jpeg')"></div>
-															<!--end::Img-->
-															<!--begin::Play-->
-															<button class="btn btn-icon h-auto w-auto p-0 ms-4 mb-4 position-absolute bottom-0 right-0" data-kt-element="list-play-button">
-																<i class="bi bi-play-fill text-white fs-2x" data-kt-element="list-play-icon"></i>
-																<i class="bi bi-pause-fill text-white fs-2x d-none" data-kt-element="list-pause-icon"></i>
-															</button>
-															<!--end::Play-->
-														</div>
-														<!--end::User pic-->
-														
-													</div>
-													<!--end::Player card-->
-												</div>
-												<!--end::Col-->
-                                                <!--begin::Col-->
-												<div class="col-sm-2 mb-3 mb-sm-0">
-													<!--begin::Player card-->
-													<div class="m-0">
-														<!--begin::User pic-->
-														<div class="card-rounded position-relative mb-5">
-															<!--begin::Img-->
-															<div class="bgi-position-center bgi-no-repeat bgi-size-cover h-200px card-rounded" style="background-image:url('assets/media/post/Post3.jpeg')"></div>
-															<!--end::Img-->
-															<!--begin::Play-->
-															<button class="btn btn-icon h-auto w-auto p-0 ms-4 mb-4 position-absolute bottom-0 right-0" data-kt-element="list-play-button">
-																<i class="bi bi-play-fill text-white fs-2x" data-kt-element="list-play-icon"></i>
-																<i class="bi bi-pause-fill text-white fs-2x d-none" data-kt-element="list-pause-icon"></i>
-															</button>
-															<!--end::Play-->
-														</div>
-														<!--end::User pic-->
-														
-													</div>
-													<!--end::Player card-->
-												</div>
-												<!--end::Col-->
+											
 											</div>
 											<!--end::Row-->
 											
@@ -2494,7 +2386,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Subtitle-->
 												<!--begin::Link-->
 												<a href="https://www.facebook.com/keenthemes" class="mb-6">
-													<img src="assets/media/svg/brand-logos/facebook-4.svg" class="h-20px me-2" alt="" />
+													<img src="https://drive.google.com/thumbnail?id=1XBD_-Xo4RFz8VPf1c5_CYzw08e3s2npc" class="h-20px me-2" alt="" />
 													<span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Facebook</span>
 												</a>
 												<!--end::Link-->

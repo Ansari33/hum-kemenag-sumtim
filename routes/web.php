@@ -8,30 +8,30 @@ use App\Http\Controllers\NomorSuratController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DataInformasiController;
 use App\Http\Controllers\KegiatanController;
+use App\Http\Controllers\LandingController;
 use App\Models\Kecamatan;
 use App\Models\Pegawai;
 
-Route::get('/', function () { return view('landing.beranda');})->name('landing');
+Route::get('/', [LandingController::class, 'beranda'])->name('landing');
 
 Route::prefix('profil')->group(function () {
-  Route::get('/sejarah', function () { return view('landing.sejarah');})->name('sejarah');
-  Route::get('/visi-misi', function () { return view('landing.visi-misi');})->name('visi-misi');
-  Route::get('/tugas-fungsi', function () { return view('landing.tugas-fungsi');})->name('tugas-fungsi');
+  Route::get('/sejarah', [LandingController::class, 'sejarah'])->name('sejarah');
+  Route::get('/visi-misi', [LandingController::class, 'visiMisi'])->name('visi-misi');
+  Route::get('/tugas-fungsi', [LandingController::class, 'tugasFungsi'])->name('tugas-fungsi');
 });
 
-Route::get('/unit-kerja', function () { return view('landing.unit-kerja');})->name('unit-kerja');
-Route::get('/berita', function () { return view('landing.berita');})->name('berita');
+Route::get('/unit-kerja', [LandingController::class, 'unitKerja'])->name('unit-kerja');
+Route::get('/berita', [LandingController::class, 'berita'])->name('berita');
 
 Route::prefix('informasi')->group(function () {
-  Route::get('/data-keagamaan', function () { return view('landing.data-keagamaan');})->name('data-keagamaan');
-  Route::get('/data-pendidikan', function () { return view('landing.data-pendidikan');})->name('data-pendidikan');
- // Route::get('/tugas-fungsi', function () { return view('landing.tugas-fungsi');})->name('tugas-fungsi');
+  Route::get('/data-keagamaan', [LandingController::class, 'dataKeagamaan'])->name('data-keagamaan');
+  Route::get('/data-pendidikan', [LandingController::class, 'dataPendidikan'])->name('data-pendidikan');
+ // Route::get('/tugas-fungsi', [LandingController::class, 'tugasFungsi'])->name('tugas-fungsi');
 });
 
 Route::prefix('zi')->group(function () {
-  Route::get('/manajemen-perubahan', function () { return view('landing.manajemen-perubahan');})->name('manajemen-perubahan');
-  Route::get('/data-pendidikan', function () { return view('landing.data-pendidikan');})->name('data-pendidikan');
- // Route::get('/tugas-fungsi', function () { return view('landing.tugas-fungsi');})->name('tugas-fungsi');
+  Route::get('/manajemen-perubahan', [LandingController::class, 'manajemenPerubahan'])->name('manajemen-perubahan');
+  
 });
 
 Route::get('/admin', function () { return view('welcome');})->name('admin');
@@ -81,6 +81,18 @@ Route::middleware(['auth', 'verified'])->prefix('laporan-kinerja')->group(functi
   Route::get('/pdf/{b}/{t}/{a}', [PegawaiController::class, 'pdf'])->name('laporan-kinerja.pdf');
    
 });
+
+Route::middleware(['auth', 'verified'])->prefix('publikasi')->group(function () {
+    Route::prefix('konten')->group(function () {
+      Volt::route('/', 'konten.index')->name('konten');
+      Volt::route('add', 'konten.add')->name('konten.add');
+      Volt::route('edit/{id}', 'konten.edit')->name('konten.edit');
+      Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('data-informasi.delete');    
+  });
+  
+});
+
+
 
 Route::middleware(['auth', 'verified'])->prefix('data-informasi')->group(function () {
   Volt::route('/', 'data-informasi.index')->name('data-informasi');
