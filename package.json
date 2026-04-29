@@ -16,6 +16,7 @@
     "axios": "^1.7.4",
     "boxicons": "~2.1.4",
     "concurrently": "^9.0.1",
+    "jodit": "^4.12.2",
     "jquery": "~3.7.1",
     "laravel-vite-plugin": "^1.0",
     "sweetalert2": "^11.22.5",

@@ -29,6 +29,12 @@
 <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon/kemenag_logo.ico') }}" />
 <!-- <link href="https://demos.themeselection.com/sneat-bootstrap-html-laravel-admin-template/demo/build/assets/select2-xKBs23S7.css" > -->
 
+<!-- Include Jodit CSS Styling -->
+<link rel="stylesheet" href="//unpkg.com/jodit@4.1.16/es2021/jodit.min.css">
+
+<!-- Include the Jodit JS Library -->
+<script src="//unpkg.com/jodit@4.1.16/es2021/jodit.min.js"></script>
+
 
 <!-- Include Styles -->
 @include('partials.styles')

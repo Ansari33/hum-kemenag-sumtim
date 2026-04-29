@@ -13,7 +13,7 @@ class Add extends Component
 
     public $judul;
     public $tipe;
-    public $isi;
+    public $content;
     public $foto;
     public function render()
     {
@@ -28,7 +28,7 @@ class Add extends Component
             Berita::create([
                 'judul'      => $this->judul,
                 'tipe'    => $this->tipe,
-                'isi'  => $this->isi,
+                'isi'  => $this->content,
                 'gambar'       => $this->foto,
             ]);
 
@@ -48,4 +48,6 @@ class Add extends Component
             return $this->redirect('/publikasi/berita/add', navigate: true);
         }
     }
+    // This will update all Jodit editors on the page
+    //$this->dispatch('update-jodit-content', $newContent);
 }

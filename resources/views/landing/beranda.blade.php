@@ -2084,7 +2084,7 @@ License: For each use you must have a valid license purchased only from above li
 												<span class="card-label fw-bold fs-3 mb-1">Berita Kanwil</span>
 											</h3>
 											<div class="card-toolbar" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover" >
-												<a href="#" class="btn btn-sm btn-light btn-active-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_invite_friends">
+												<a href="/berita" class="btn btn-sm btn-light btn-active-primary" >
 												<i class="ki-duotone ki-plane fs-2"></i>Selengkapnya</a>
 											</div>
 										</div>
@@ -2095,6 +2095,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--end::Separator-->
 										<!--begin::Row-->
 										<div class="row card-body g-10">
+										@foreach($berita as $ktn => $kt)
 											<!--begin::Col-->
 											<div class="col-md-3">
 												<!--begin::Hot sales post-->
@@ -2118,7 +2119,7 @@ License: For each use you must have a valid license purchased only from above li
 													<!--begin::Body-->
 													<div class="mt-5">
 														<!--begin::Title-->
-														<a href="#" class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">Kemenag Sumba Timur Perkuat Peran FKUB, Bangun Sinergi dengan Pemerintah Daerah</a>
+														<a href="#" class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $kt->judul }}</a>
 														<!--end::Title-->
 														
 														<!--begin::Text-->
@@ -2138,135 +2139,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Hot sales post-->
 											</div>
 											<!--end::Col-->
-											<!--begin::Col-->
-											<div class="col-md-3">
-												<!--begin::Hot sales post-->
-												<div class="card-xl-stretch mx-md-3">
-													<!--begin::Overlay-->
-													<a class="d-block overlay" data-fslightbox="lightbox-hot-sales" href="assets/media/stock/600x600/img-14.jpg">
-														<!--begin::Image-->
-														<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px" style="background-image:url('assets/media/berita/kua.jpeg')"></div>
-														<!--end::Image-->
-														<!--begin::Action-->
-														<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-															<i class="ki-duotone ki-eye fs-2x text-white">
-																<span class="path1"></span>
-																<span class="path2"></span>
-																<span class="path3"></span>
-															</i>
-														</div>
-														<!--end::Action-->
-													</a>
-													<!--end::Overlay-->
-													<!--begin::Body-->
-													<div class="mt-5">
-														<!--begin::Title-->
-														<a href="#" class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">KUA Kota Waingapu dan Puskesmas Perketat Skrining Catin untuk Cegah Stunting</a>
-														<!--end::Title-->
-														
-														<!--begin::Text-->
-														<div class="fs-6 fw-bold mt-5 d-flex flex-stack">
-															<!--begin::Label-->
-															<span class="badge border border-dashed fs-2 fw-bold text-dark p-2">
-															<span class="fs-6 fw-semibold text-gray-400">$</span>27</span>
-															<!--end::Label-->
-															<!--begin::Action-->
-															<a href="#" class="btn btn-sm btn-primary">Baca</a>
-															<!--end::Action-->
-														</div>
-														<!--end::Text-->
-													</div>
-													<!--end::Body-->
-												</div>
-												<!--end::Hot sales post-->
-											</div>
-											<!--end::Col-->
-											<!--begin::Col-->
-											<div class="col-md-3">
-												<!--begin::Hot sales post-->
-												<div class="card-xl-stretch ms-md-6">
-													<!--begin::Overlay-->
-													<a class="d-block overlay" data-fslightbox="lightbox-hot-sales" href="assets/media/stock/600x400/img-71.jpg">
-														<!--begin::Image-->
-														<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px" style="background-image:url('assets/media/berita/fkub.jpeg')"></div>
-														<!--end::Image-->
-														<!--begin::Action-->
-														<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-															<i class="ki-duotone ki-eye fs-2x text-white">
-																<span class="path1"></span>
-																<span class="path2"></span>
-																<span class="path3"></span>
-															</i>
-														</div>
-														<!--end::Action-->
-													</a>
-													<!--end::Overlay-->
-													<!--begin::Body-->
-													<div class="mt-5">
-														<!--begin::Title-->
-														<a href="#" class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">Kemenag Dukung Program KPK, Perkuat Pengawasan Tata Kelola di Sumba Timur</a>
-														<!--end::Title-->
-														
-														<!--begin::Text-->
-														<div class="fs-6 fw-bold mt-5 d-flex flex-stack">
-															<!--begin::Label-->
-															<span class="badge border border-dashed fs-2 fw-bold text-dark p-2">
-															<span class="fs-6 fw-semibold text-gray-400">$</span>25</span>
-															<!--end::Label-->
-															<!--begin::Action-->
-															<a href="#" class="btn btn-sm btn-primary">Baca</a>
-															<!--end::Action-->
-														</div>
-														<!--end::Text-->
-													</div>
-													<!--end::Body-->
-												</div>
-												<!--end::Hot sales post-->
-											</div>
-											<!--end::Col-->
-											<!--begin::Col-->
-											<div class="col-md-3">
-												<!--begin::Hot sales post-->
-												<div class="card-xl-stretch ms-md-6">
-													<!--begin::Overlay-->
-													<a class="d-block overlay" data-fslightbox="lightbox-hot-sales" href="assets/media/stock/600x400/img-71.jpg">
-														<!--begin::Image-->
-														<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px" style="background-image:url('assets/media/stock/600x400/img-71.jpg')"></div>
-														<!--end::Image-->
-														<!--begin::Action-->
-														<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
-															<i class="ki-duotone ki-eye fs-2x text-white">
-																<span class="path1"></span>
-																<span class="path2"></span>
-																<span class="path3"></span>
-															</i>
-														</div>
-														<!--end::Action-->
-													</a>
-													<!--end::Overlay-->
-													<!--begin::Body-->
-													<div class="mt-5">
-														<!--begin::Title-->
-														<a href="#" class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">Kemenag Dukung Program KPK, Perkuat Pengawasan Tata Kelola di Sumba Timur</a>
-														<!--end::Title-->
-														
-														<!--begin::Text-->
-														<div class="fs-6 fw-bold mt-5 d-flex flex-stack">
-															<!--begin::Label-->
-															<span class="badge border border-dashed fs-2 fw-bold text-dark p-2">
-															<span class="fs-6 fw-semibold text-gray-400">$</span>25</span>
-															<!--end::Label-->
-															<!--begin::Action-->
-															<a href="#" class="btn btn-sm btn-primary">Baca</a>
-															<!--end::Action-->
-														</div>
-														<!--end::Text-->
-													</div>
-													<!--end::Body-->
-												</div>
-												<!--end::Hot sales post-->
-											</div>
-											<!--end::Col-->
+										@endforeach	
 										</div>
 										<!--end::Row-->
 									</div>
