@@ -33,7 +33,7 @@
         <div class="mb-4 row">
           <label for="html5-email-input" class="col-md-2 col-form-label">Isi</label>
           <div class="col-md-10">
-          <livewire:jodit-text-editor wire:model.live="content" />
+            
           </div>
         </div>
 
@@ -52,8 +52,6 @@
     </div>
 </div>
 
-<script>
-    
-    </script>
+
 
 
