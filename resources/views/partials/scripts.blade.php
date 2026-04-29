@@ -18,3 +18,5 @@
 
 <!-- Place this tag before closing body tag for github widget button. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
+<script src="https://cdn.tiny.cloud/1/8n67nw5652farfo7l5vsy91d1oizp3z8ekt1vfnyadd33n5h/tinymce/8/tinymce.min.js" referrerpolicy="origin" crossorigin="anonymous"></script>
+
