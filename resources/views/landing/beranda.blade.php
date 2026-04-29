@@ -1558,11 +1558,11 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Card body-->
 										<div class="card-body pt-7">
 											<!--begin::Row-->
-											<div class="row g-5 g-xl-9 mb-5 mb-xl-9">
+											<div class="row g-5 g-xl-9 mb-2 mb-xl-9">
 												<!--begin::Col-->
 												
 												@foreach($konten as $ktn => $kt)
-												<div class="col-sm-2 mb-3 mb-sm-0">
+												<div class="col-sm-2 mb-1 mb-sm-0">
 													<!--begin::Player card-->
 													<div class="m-0">
 														<!--begin::User pic-->
@@ -1610,9 +1610,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Header-->
 										<div class="card-header pt-5">
 											<!--begin::Title-->
-											<h4 class="card-title d-flex align-items-start flex-column">
-												<span class="card-label fw-bold text-gray-800">Galeri PTSP</span>
-											</h4>
+											
 											<!--end::Title-->
 											<!--begin::Toolbar-->
 											<div class="card-toolbar">
@@ -1631,52 +1629,25 @@ License: For each use you must have a valid license purchased only from above li
 										<div class="card-body py-6">
 											<!--begin::Carousel-->
 											<div class="carousel-inner mt-n5">
+											@foreach($berita as $brt => $br)
 												<!--begin::Item-->
 												<div class="carousel-item active show">
 													<!--begin::Tiles Widget 1-->
-											<div class="card h-450px bgi-no-repeat bgi-size-cover bgi-position-y-center card-xl-stretch" style="background-image:url('assets/media/ptsp/PTSP.jpeg')">
-												<!--begin::Body-->
-												<div class="card-body p-6">
-													<!--begin::Title-->
-													<a href="#" class="text-black text-hover-primary fw-bold fs-2" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app"></a>
-													<!--end::Title-->
+													<div class="card h-400px bgi-no-repeat bgi-size-cover bgi-position-y-center card-xl-stretch" style="background-image:url('{{$br->gambar}}')">
+														<!--begin::Body-->
+														<div class="card-body p-6">
+															<!--begin::Title-->
+															<a href="/berita/{{ $br->judul }}" class="text-black text-hover-primary fw-bold fs-2" >{{ $br->judul }}</a>
+															<!--end::Title-->
+														</div>
+														<!--end::Body-->
+													</div>
+													<!--end::Tiles Widget 1-->
+															
 												</div>
-												<!--end::Body-->
-											</div>
-											<!--end::Tiles Widget 1-->
-													
-												</div>
+												
 												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="carousel-item">
-															<!--begin::Tiles Widget 1-->
-											<div class="card h-450px bgi-no-repeat bgi-size-cover bgi-position-y-center card-xl-stretch" style="background-image:url('assets/media/ptsp/IMG_2161.jpg')">
-												<!--begin::Body-->
-												<div class="card-body p-6">
-													<!--begin::Title-->
-													<a href="#" class="text-black text-hover-primary fw-bold fs-2" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app"></a>
-													<!--end::Title-->
-												</div>
-												<!--end::Body-->
-											</div>
-											<!--end::Tiles Widget 1-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="carousel-item">
-															<!--begin::Tiles Widget 1-->
-											<div class="card h-500px bgi-no-repeat bgi-size-cover bgi-position-y-center card-xl-stretch" style="background-image:url('assets/media/ptsp/IMG_4771.jpg')">
-												<!--begin::Body-->
-												<div class="card-body p-6">
-													<!--begin::Title-->
-													<a href="#" class="text-black text-hover-primary fw-bold fs-2" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app"></a>
-													<!--end::Title-->
-												</div>
-												<!--end::Body-->
-											</div>
-											<!--end::Tiles Widget 1-->
-												</div>
-												<!--end::Item-->
+											@endforeach	
 											</div>
 											<!--end::Carousel-->
 										</div>

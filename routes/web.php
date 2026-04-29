@@ -22,6 +22,7 @@ Route::prefix('profil')->group(function () {
 
 Route::get('/unit-kerja', [LandingController::class, 'unitKerja'])->name('unit-kerja');
 Route::get('/berita', [LandingController::class, 'berita'])->name('berita');
+Route::get('/berita/{judul}', [LandingController::class, 'bacaBerita'])->name('baca-berita');
 
 Route::prefix('informasi')->group(function () {
   Route::get('/data-keagamaan', [LandingController::class, 'dataKeagamaan'])->name('data-keagamaan');
@@ -87,6 +88,16 @@ Route::middleware(['auth', 'verified'])->prefix('publikasi')->group(function () 
       Volt::route('/', 'konten.index')->name('konten');
       Volt::route('add', 'konten.add')->name('konten.add');
       Volt::route('edit/{id}', 'konten.edit')->name('konten.edit');
+      Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('data-informasi.delete');    
+  });
+  
+});
+
+Route::middleware(['auth', 'verified'])->prefix('publikasi')->group(function () {
+    Route::prefix('berita')->group(function () {
+      Volt::route('/', 'berita.index')->name('berita');
+      Volt::route('add', 'berita.add')->name('berita.add');
+      Volt::route('edit/{id}', 'berita.edit')->name('berita.edit');
       Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('data-informasi.delete');    
   });
   

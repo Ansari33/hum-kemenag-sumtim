@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Berita;
 use Illuminate\Http\Request;
 use App\Models\Konten;
 
@@ -12,7 +13,8 @@ class LandingController extends Controller
     public function beranda()
     {
         $konten = Konten::latest()->take(6)->get();
-        return view('landing.beranda', compact('konten'));
+        $berita = Berita::latest()->take(5)->get();
+        return view('landing.beranda', compact('konten', 'berita'));
     }
 
     public function sejarah()
@@ -39,6 +41,13 @@ class LandingController extends Controller
     {
         return view('landing.berita');
     }
+
+    public function bacaBerita($judul)
+    {
+        $berita = Berita::where('judul', $judul)->first();
+        return view('landing.baca', compact('berita'));
+    }
+    
 
     public function dataKeagamaan()
         {

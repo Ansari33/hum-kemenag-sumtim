@@ -53,7 +53,7 @@
           <a class="menu-link" href="{{ route('konten') }}" wire:navigate>{{ __('Konten') }}</a>
         </li>
         <li class="menu-item {{ request()->routeIs('tugas*') ? 'active' : '' }}">
-          <a class="menu-link" href="{{ route('tugas') }}" wire:navigate>{{ __('Berita') }}</a>
+          <a class="menu-link" href="{{ route('berita') }}" wire:navigate>{{ __('Berita') }}</a>
         </li>
       </ul>
     </li>
