@@ -765,6 +765,50 @@ License: For each use you must have a valid license purchased only from above li
 							</div>
 							<!--end::Row-->
 
+							<!--begin::Team Section-->
+			<div class="py-10 py-lg-20">
+				<!--begin::Container-->
+				<div class="container">
+					<!--begin::Heading-->
+				
+					<!--end::Heading-->
+					<!--begin::Slider-->
+					<div class="tns tns-default" style="direction: ltr">
+						<!--begin::Wrapper-->
+						<div data-tns="true" data-tns-loop="true" data-tns-swipe-angle="false" data-tns-speed="2000" data-tns-autoplay="true" data-tns-autoplay-timeout="18000" data-tns-controls="true" data-tns-nav="false" data-tns-items="1" data-tns-center="false" data-tns-dots="false" data-tns-prev-button="#kt_team_slider_prev" data-tns-next-button="#kt_team_slider_next" data-tns-responsive="{1200: {items: 3}, 992: {items: 2}}">
+							
+						@for($x=1;$x<=7;$x++)
+							<!--begin::Item-->
+							<div class="text-center">
+								<!--begin::Photo-->
+								<div class=" mx-auto mb-5 d-flex w-350px h-400px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/ptsp/ucapan ({{$x}}).jpeg')"></div>
+								<!--end::Photo-->
+								<!--begin::Person-->
+							
+								<!--end::Person-->
+							</div>
+							<!--end::Item-->
+						@endfor	
+							
+						</div>
+						<!--end::Wrapper-->
+						<!--begin::Button-->
+						<button class="btn btn-icon btn-active-color-primary" id="kt_team_slider_prev">
+							<i class="ki-duotone ki-left fs-2x"></i>
+						</button>
+						<!--end::Button-->
+						<!--begin::Button-->
+						<button class="btn btn-icon btn-active-color-primary" id="kt_team_slider_next">
+							<i class="ki-duotone ki-right fs-2x"></i>
+						</button>
+						<!--end::Button-->
+					</div>
+					<!--end::Slider-->
+				</div>
+				<!--end::Container-->
+			</div>
+			<!--end::Team Section-->
+
 							<div class="row gy-5 g-xl-8">
 								<div class="col-xl-12">
 									<div class="card card-xl-stretch mb-5 mb-xl-8">

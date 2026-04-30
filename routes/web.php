@@ -92,25 +92,33 @@ Route::middleware(['auth', 'verified'])->prefix('laporan-kinerja')->group(functi
    
 });
 
-Route::middleware(['auth', 'verified'])->prefix('publikasi')->group(function () {
-    Route::prefix('konten')->group(function () {
-      Volt::route('/', 'konten.index')->name('konten');
-      Volt::route('add', 'konten.add')->name('konten.add');
-      Volt::route('edit/{id}', 'konten.edit')->name('konten.edit');
-      Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('data-informasi.delete');    
-  });
-  
-});
+  Route::middleware(['auth', 'verified'])->prefix('publikasi')->group(function () {
+      Route::prefix('konten')->group(function () {
+        Volt::route('/', 'konten.index')->name('konten');
+        Volt::route('add', 'konten.add')->name('konten.add');
+        Volt::route('edit/{id}', 'konten.edit')->name('konten.edit');
+        Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('data-informasi.delete');    
+    });
 
-Route::middleware(['auth', 'verified'])->prefix('publikasi')->group(function () {
     Route::prefix('berita')->group(function () {
-      Volt::route('/', 'berita.index')->name('berita');
-      Volt::route('add', 'berita.add')->name('berita.add');
-      Volt::route('edit/{id}', 'berita.edit')->name('berita.edit');
-      Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('data-informasi.delete');    
+        Volt::route('/', 'berita.index')->name('berita');
+        Volt::route('add', 'berita.add')->name('berita.add');
+        Volt::route('edit/{id}', 'berita.edit')->name('berita.edit');
+        Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('data-informasi.delete');    
+    });
+    
   });
-  
-});
+
+
+  Route::middleware(['auth', 'verified'])->prefix('zi')->group(function () {
+      
+    Volt::route('/', 'konten.index')->name('zi');
+    // Volt::route('add', 'konten.add')->name('konten.add');
+    // Volt::route('edit/{id}', 'konten.edit')->name('konten.edit');
+    // Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('data-informasi.delete');    
+   
+    
+  });
 
 
 
