@@ -7,6 +7,10 @@ use App\Models\Berita;
 use DB;
 use Jantinnerezo\LivewireAlert\Facades\LivewireAlert;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
+
+use function Livewire\store;
 
 class Add extends Component
 {
@@ -31,11 +35,10 @@ class Add extends Component
         DB::beginTransaction();
         try {
             $gambar = str()->random(20);
-           //  ($this->foto) ? $this->foto->move_uploaded_file('gambar', $gambar . '.' . $this->foto->extension(), 'public') : null;
-             ($this->foto) ? 
-             move_uploaded_file($this->foto->getRealPath(), public_path('gambar/' . $gambar . '.' . $this->foto->extension())) 
-             : null;  
-  
+            ($this->foto) ?
+            ($this->foto)->storePubliclyAs('/gambar', $gambar . '.' . ($this->foto)->extension()) : 
+            null;
+
             Berita::create([
                 'judul'      => $this->judul,
                 'tipe'       => $this->tipe,
@@ -54,13 +57,16 @@ class Add extends Component
            
             return $this->redirect('/publikasi/berita', navigate: true);
         } catch (\Exception $e) {
+
             DB::rollBack();
+             //return $e->getMessage();
             LivewireAlert::title('Gagal!')
             ->text($e->getMessage())
+            ->timer(10000)
             ->warning()
             ->show();
-            session()->flash('error', $e->getMessage());
-            return $this->redirect('/publikasi/berita/add', navigate: true);
+            //session()->flash('error', $e->getMessage());
+           // return $this->redirect('/publikasi/berita/add', navigate: true);
         }
     }
     // This will update all Jodit editors on the page

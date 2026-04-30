@@ -47,7 +47,7 @@
         <div class="mb-4 row">
           <label for="html5-url-input" class="col-md-2 col-form-label">Gambar</label>
           <div class="col-md-10">
-            <input name="file" wire:model.live="foto" required class="form-control" type="file"  />
+            <input name="file" wire:model="foto" required class="form-control" type="file"  />
           </div>
         </div>
         

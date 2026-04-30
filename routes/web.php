@@ -11,6 +11,7 @@ use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\LandingController;
 use App\Models\Kecamatan;
 use App\Models\Pegawai;
+use Illuminate\Support\Facades\Storage;
 
 Route::get('/', [LandingController::class, 'beranda'])->name('landing');
 
@@ -33,6 +34,14 @@ Route::prefix('informasi')->group(function () {
 Route::prefix('zi')->group(function () {
   Route::get('/manajemen-perubahan', [LandingController::class, 'manajemenPerubahan'])->name('manajemen-perubahan');
   
+});
+
+Route::get('/gambar-file/{filename}', function ($filename) {
+    $path = 'gambar/' . $filename;
+   // return Storage::exists($path) ? 'Ada' : 'Tidak Ditemukan';
+    if (!Storage::exists($path)) abort(404);
+
+    return response()->file(storage_path('app/private/' . $path));
 });
 
 Route::get('/admin', function () { return view('welcome');})->name('admin');

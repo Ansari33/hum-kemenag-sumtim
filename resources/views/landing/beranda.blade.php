@@ -1628,13 +1628,17 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Body-->
 										<div class="card-body py-6">
 											<!--begin::Carousel-->
+											@php
+												$gambarnya = url("/gambar-file/"); 
+											@endphp
 											<div class="carousel-inner mt-n5">
 											@foreach($berita as $brt => $br)
 												<!--begin::Item-->
 												<div class="carousel-item active show">
 													<!--begin::Tiles Widget 1-->
+													
 													@if ($br->tipe == 'Daerah')
-													<div class="card h-400px bgi-no-repeat bgi-size-cover bgi-position-y-center card-xl-stretch" style="background-image:url('{{ Storage::url('gambar/' . $br->gambar) }}')">
+													<div class="card h-400px bgi-no-repeat bgi-size-cover bgi-position-y-center card-xl-stretch" style="background-image:url('/gambar-file/{{ $br->gambar }}')">
 													@else
 													<div class="card h-400px bgi-no-repeat bgi-size-cover bgi-position-y-center card-xl-stretch" style="background-image:url('{{$br->link_gambar}}')">
 													@endif
@@ -2115,7 +2119,7 @@ License: For each use you must have a valid license purchased only from above li
 														@php
 														$image = asset('storage/berita/'.$kt->gambar);
 														@endphp
-														<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px"  style="background-image:url('{{ Storage::url('gambar/' . $kt->gambar) }}')"></div>
+														<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px"  style="background-image:url('/gambar-file/{{  $kt->gambar }}')"></div>
 														<!--end::Image-->
 														@else
 														<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px"  style="background-image:url('{{ $kt->link_gambar }}')"></div>
