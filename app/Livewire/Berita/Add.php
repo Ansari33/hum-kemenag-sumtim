@@ -31,7 +31,7 @@ class Add extends Component
         DB::beginTransaction();
         try {
             $gambar = str()->random(20);
-             ($this->foto) ? $this->foto->storeAs('berita', $gambar . '.' . $this->foto->extension(), 'public') : null;
+             ($this->foto) ? $this->foto->storeAs('gambar', $gambar . '.' . $this->foto->extension(), 'public') : null;
   
             Berita::create([
                 'judul'      => $this->judul,

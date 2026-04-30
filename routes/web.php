@@ -148,6 +148,11 @@ Route::get('/migrate', function () {
   Artisan::call('migrate');
 });
 
+Route::get('/link', function () {
+  Artisan::call('storage:link');
+  rettun 'success';
+});
+
 Route::get('/kecamatan', function () {
   return Kecamatan::get();
 });
