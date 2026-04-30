@@ -81,7 +81,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Title-->
 											<h3 class="card-title align-items-start flex-column">
 												<span class="card-label fw-bold text-dark">Postingan Terakhir</span>
-												<span class="text-gray-400 mt-1 fw-semibold fs-6">Updated 37 minutes ago</span>
+												<span class="text-gray-400 mt-1 fw-semibold fs-6"></span>
 											</h3>
 											<!--end::Title-->
 											<!--begin::Toolbar-->
@@ -155,6 +155,9 @@ License: For each use you must have a valid license purchased only from above li
 													<li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="0" class="active ms-1"></li>
 													<li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="1" class="ms-1"></li>
 													<li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="2" class="ms-1"></li>
+													<li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="3" class="ms-1"></li>
+													<li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="4" class="ms-1"></li>
+													<li data-bs-target="#kt_sliders_widget_1_slider" data-bs-slide-to="5" class="ms-1"></li>
 												</ol>
 												<!--end::Carousel Indicators-->
 											</div>
@@ -170,7 +173,7 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="carousel-inner mt-n5">
 											@foreach($berita as $brt => $br)
 												<!--begin::Item-->
-												<div class="carousel-item active show">
+												<div class="carousel-item @if($loop->iteration == 1) active @endif  show  ">
 													<!--begin::Tiles Widget 1-->
 													
 													@if ($br->tipe == 'Daerah')
