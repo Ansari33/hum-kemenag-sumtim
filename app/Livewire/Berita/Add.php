@@ -31,7 +31,10 @@ class Add extends Component
         DB::beginTransaction();
         try {
             $gambar = str()->random(20);
-             ($this->foto) ? $this->foto->storeAs('gambar', $gambar . '.' . $this->foto->extension(), 'public') : null;
+           //  ($this->foto) ? $this->foto->move_uploaded_file('gambar', $gambar . '.' . $this->foto->extension(), 'public') : null;
+             ($this->foto) ? 
+             move_uploaded_file($this->foto->getRealPath(), public_path('gambar/' . $gambar . '.' . $this->foto->extension())) 
+             : null;  
   
             Berita::create([
                 'judul'      => $this->judul,

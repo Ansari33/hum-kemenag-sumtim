@@ -1634,7 +1634,7 @@ License: For each use you must have a valid license purchased only from above li
 												<div class="carousel-item active show">
 													<!--begin::Tiles Widget 1-->
 													@if ($br->tipe == 'Daerah')
-													<div class="card h-400px bgi-no-repeat bgi-size-cover bgi-position-y-center card-xl-stretch" style="background-image:url('{{ Storage::url('gambar/' . $kt->gambar) }}')">
+													<div class="card h-400px bgi-no-repeat bgi-size-cover bgi-position-y-center card-xl-stretch" style="background-image:url('{{ Storage::url('gambar/' . $br->gambar) }}')">
 													@else
 													<div class="card h-400px bgi-no-repeat bgi-size-cover bgi-position-y-center card-xl-stretch" style="background-image:url('{{$br->link_gambar}}')">
 													@endif
