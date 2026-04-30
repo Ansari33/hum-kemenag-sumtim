@@ -1690,7 +1690,7 @@ License: For each use you must have a valid license purchased only from above li
 													<!--begin::Container-->
 													<div class="overlay mt-8">
 														<!--begin::Image-->
-														<div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-350px" style="background-image:url('{{ Storage::url('gambar/' . $berita->gambar) }}')"></div>
+														<div class="bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-400px" style="background-image:url('{{ Storage::url('gambar/' . $berita->gambar) }}')"></div>
 														<!--end::Image-->
 														
 													</div>
@@ -1710,22 +1710,11 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Sidebar-->
 										<div class="flex-column flex-lg-row-auto w-100 w-xl-300px mb-10">
 											<!--begin::Search blog-->
-											<div class="mb-16">
-												<h4 class="text-dark mb-7">Search Blog</h4>
-												<!--begin::Input group-->
-												<div class="position-relative">
-													<i class="ki-duotone ki-magnifier fs-3 text-gray-500 position-absolute top-50 translate-middle ms-6">
-														<span class="path1"></span>
-														<span class="path2"></span>
-													</i>
-													<input type="text" class="form-control form-control-solid ps-10" name="search" value="" placeholder="Search" />
-												</div>
-												<!--end::Input group-->
-											</div>
+											
 											<!--end::Search blog-->
 											<!--begin::Catigories-->
 											<div class="mb-16">
-												<h4 class="text-dark mb-7">Categories</h4>
+												<h4 class="text-dark mb-7">Jenis Berita</h4>
 												<!--begin::Item-->
 												<div class="d-flex flex-stack fw-semibold fs-5 text-muted mb-4">
 													<!--begin::Text-->
@@ -1761,67 +1750,24 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Catigories-->
 											<!--begin::Recent posts-->
 											<div class="m-0">
-												<h4 class="text-dark mb-7">Recent Posts</h4>
+												<h4 class="text-dark mb-7">Berita Terkini</h4>
+												@foreach ($recent as $item => $it)
 												<!--begin::Item-->
 												<div class="d-flex flex-stack mb-7">
 													<!--begin::Symbol-->
 													<div class="symbol symbol-60px symbol-2by3 me-4">
-														<div class="symbol-label" style="background-image: url('assets/media/stock/600x400/img-1.jpg')"></div>
+														<div class="symbol-label" style="background-image: url('{{ Storage::url('gambar/' . $it->gambar) }}')"></div>
 													</div>
 													<!--end::Symbol-->
 													<!--begin::Title-->
 													<div class="m-0">
-														<a href="#" class="text-dark fw-bold text-hover-primary fs-6">About Bootstrap Admin</a>
-														<span class="text-gray-600 fw-semibold d-block pt-1 fs-7">We’ve been a focused on making a the sky</span>
+														<a href="#" class="text-dark fw-bold text-hover-primary fs-6">{{ $it->judul }}</a>
+														<span class="text-gray-600 fw-semibold d-block pt-1 fs-7">{{ $it->tanggal }}</span>
 													</div>
 													<!--end::Title-->
 												</div>
 												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex flex-stack mb-7">
-													<!--begin::Symbol-->
-													<div class="symbol symbol-60px symbol-2by3 me-4">
-														<div class="symbol-label" style="background-image: url('assets/media/stock/600x400/img-2.jpg')"></div>
-													</div>
-													<!--end::Symbol-->
-													<!--begin::Title-->
-													<div class="m-0">
-														<a href="#" class="text-dark fw-bold text-hover-primary fs-6">A yellow sofa</a>
-														<span class="text-gray-600 fw-semibold d-block pt-1 fs-7">We’ve been a focused on making a the sky</span>
-													</div>
-													<!--end::Title-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex flex-stack mb-7">
-													<!--begin::Symbol-->
-													<div class="symbol symbol-60px symbol-2by3 me-4">
-														<div class="symbol-label" style="background-image: url('assets/media/stock/600x400/img-3.jpg')"></div>
-													</div>
-													<!--end::Symbol-->
-													<!--begin::Title-->
-													<div class="m-0">
-														<a href="#" class="text-dark fw-bold text-hover-primary fs-6">Our Camra Mega Set</a>
-														<span class="text-gray-600 fw-semibold d-block pt-1 fs-7">We’ve been a focused on making a the sky</span>
-													</div>
-													<!--end::Title-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex flex-stack">
-													<!--begin::Symbol-->
-													<div class="symbol symbol-60px symbol-2by3 me-4">
-														<div class="symbol-label" style="background-image: url('assets/media/stock/600x400/img-4.jpg')"></div>
-													</div>
-													<!--end::Symbol-->
-													<!--begin::Title-->
-													<div class="m-0">
-														<a href="#" class="text-dark fw-bold text-hover-primary fs-6">Time to cook and eat?</a>
-														<span class="text-gray-600 fw-semibold d-block pt-1 fs-7">We’ve been a focused on making a the sky</span>
-													</div>
-													<!--end::Title-->
-												</div>
-												<!--end::Item-->
+												@endforeach
 											</div>
 											<!--end::Recent posts-->
 										</div>

@@ -1633,11 +1633,19 @@ License: For each use you must have a valid license purchased only from above li
 												<!--begin::Item-->
 												<div class="carousel-item active show">
 													<!--begin::Tiles Widget 1-->
-													<div class="card h-400px bgi-no-repeat bgi-size-cover bgi-position-y-center card-xl-stretch" style="background-image:url('{{$br->gambar}}')">
+													@if ($br->tipe == 'Daerah')
+													<div class="card h-400px bgi-no-repeat bgi-size-cover bgi-position-y-center card-xl-stretch" style="background-image:url('{{ Storage::url('gambar/' . $kt->gambar) }}')">
+													@else
+													<div class="card h-400px bgi-no-repeat bgi-size-cover bgi-position-y-center card-xl-stretch" style="background-image:url('{{$br->link_gambar}}')">
+													@endif
 														<!--begin::Body-->
 														<div class="card-body p-6">
 															<!--begin::Title-->
-															<a href="/berita/{{ $br->judul }}" class="text-black text-hover-primary fw-bold fs-2" >{{ $br->judul }}</a>
+															@if ($br->tipe == 'Daerah')
+															<a href="/berita/{{ $br->judul }}" class="text-white text-hover-primary fw-bold fs-2" >{{ $br->judul }}</a>
+															@else
+															<a href="{{ $br->link_berita }}/" target="_blank" class="text-dark text-hover-primary fw-bold fs-2" >{{ $br->judul }}</a>
+															@endif
 															<!--end::Title-->
 														</div>
 														<!--end::Body-->

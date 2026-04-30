@@ -44,8 +44,9 @@ class LandingController extends Controller
 
     public function bacaBerita($judul)
     {
+        $recent = Berita::latest()->take(4)->get();
         $berita = Berita::where('judul', $judul)->first();
-        return view('landing.baca', compact('berita'));
+        return view('landing.baca', compact('berita', 'recent'));
     }
     
 
