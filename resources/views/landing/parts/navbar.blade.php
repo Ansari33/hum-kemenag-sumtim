@@ -209,7 +209,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link py-3" href="/informasi/data-keagamaan"  title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+														<a class="menu-link py-3" href="/informasi/data-keagamaan"   data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
 															<span class="menu-icon">
 																<i class="ki-duotone ki-abstract-26 fs-2">
 																	<span class="path1"></span>

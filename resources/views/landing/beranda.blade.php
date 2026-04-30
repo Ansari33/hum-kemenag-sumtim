@@ -182,12 +182,14 @@ License: For each use you must have a valid license purchased only from above li
 													<div class="card h-400px bgi-no-repeat bgi-size-cover bgi-position-y-center card-xl-stretch" style="background-image:url('{{$br->link_gambar}}')">
 													@endif
 														<!--begin::Body-->
-														<div class="p-6">
+														<div class="h-400px ">
+														</div>
+														<div class="p-6 mt-5">
 															<!--begin::Title-->
 															@if ($br->tipe == 'Daerah')
 															<a href="/berita/{{ $br->judul }}" class="text-white text-hover-primary fw-bold fs-2" >{{ $br->judul }}</a>
 															@else
-															<a href="{{ $br->link_berita }}/" target="_blank" class="text-dark text-hover-primary fw-bold fs-2" >{{ $br->judul }}</a>
+															<a href="{{ $br->link_berita }}" target="_blank" class="text-white text-hover-primary fw-bold fs-2" >{{ $br->judul }}</a>
 															@endif
 															<!--end::Title-->
 														</div>
@@ -210,7 +212,7 @@ License: For each use you must have a valid license purchased only from above li
 								<!--begin::Col-->
 								<div class="col-xl-4 mb-5 mb-xl-10">
 									<!--begin::Slider Widget 2-->
-									<div id="kt_sliders_widget_2_slider" class="card card-flush carousel carousel-custom carousel-stretch slide h-xl-100 bgi-no-repeat bgi-size-cover bgi-position-y-center" data-bs-ride="carousel" data-bs-interval="5500" style="background-image:url('https://scontent.fsub2-3.fna.fbcdn.net/v/t51.82787-15/639501962_18139683835489219_6452314199145012551_n.webp?stp=dst-jpg_tt6&_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_ohc=W0wYo9yC_hQQ7kNvwGnAEmC&_nc_oc=Adr4FKnz8mZDHrYdi5m1gdShKKrZ4bYWQ8SKEB3_z1eZXM5OOg3c7puGMA8Q4ToCuvk&_nc_zt=23&_nc_ht=scontent.fsub2-3.fna&_nc_gid=dM6dQZwvH7BsYhJThP-W6w&_nc_ss=7b289&oh=00_Af3wPV53pu8JOQ2c6B481C0WOcuNfe7mV98IR7BVu2NknA&oe=69F90F3F')">
+									<div id="kt_sliders_widget_2_slider" class="card card-flush carousel carousel-custom carousel-stretch slide h-xl-100 bgi-no-repeat bgi-size-cover bgi-position-y-center" data-bs-ride="carousel" data-bs-interval="5500" style="background-image:url('/landing/assets/media/ptsp/infop.jpg')">
 										<!--begin::Header-->
 										<div class="card-header pt-5">
 											<!--begin::Title-->
