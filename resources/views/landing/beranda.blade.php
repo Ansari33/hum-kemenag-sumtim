@@ -2081,7 +2081,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Header-->
 										<div class="card-header border-0 pt-5">
 											<h3 class="card-title align-items-start flex-column">
-												<span class="card-label fw-bold fs-3 mb-1">Berita Kanwil</span>
+												<span class="card-label fw-bold fs-3 mb-1">Berita Terkini</span>
 											</h3>
 											<div class="card-toolbar" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover" >
 												<a href="/berita" class="btn btn-sm btn-light btn-active-primary" >
@@ -2103,8 +2103,16 @@ License: For each use you must have a valid license purchased only from above li
 													<!--begin::Overlay-->
 													<a class="d-block overlay" data-fslightbox="lightbox-hot-sales" href="assets/media/stock/600x400/img-23.jpg">
 														<!--begin::Image-->
-														<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px" style="background-image:url('assets/media/berita/doa.jpeg')"></div>
+														@if($kt->tipe == 'Daerah')
+														@php
+														$image = asset('storage/berita/'.$kt->gambar);
+														@endphp
+														<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px"  style="background-image:url('{{ Storage::url('gambar/' . $kt->gambar) }}')"></div>
 														<!--end::Image-->
+														@else
+														<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px"  style="background-image:url('{{ $kt->link_gambar }}')"></div>
+														<!--end::Image-->
+														@endif
 														<!--begin::Action-->
 														<div class="overlay-layer card-rounded bg-dark bg-opacity-25">
 															<i class="ki-duotone ki-eye fs-2x text-white">
@@ -2119,17 +2127,21 @@ License: For each use you must have a valid license purchased only from above li
 													<!--begin::Body-->
 													<div class="mt-5">
 														<!--begin::Title-->
-														<a href="#" class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $kt->judul }}</a>
+														@if($kt->tipe == 'Daerah')	
+														<a href="/berita/{{ $kt->judul }}" class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $kt->judul }}</a>
+														@else
+														<a href="{{ $kt->link }}" target="_blank" class="fs-4 text-dark fw-bold text-hover-primary text-dark lh-base">{{ $kt->judul }}</a>
+														@endif
 														<!--end::Title-->
 														
 														<!--begin::Text-->
 														<div class="fs-6 fw-bold mt-5 d-flex flex-stack">
 															<!--begin::Label-->
 															<span class="badge border border-dashed fs-2 fw-bold text-dark p-2">
-															<span class="fs-6 fw-semibold text-gray-400">$</span>28</span>
+															<span class="fs-6 fw-semibold text-gray-400">{{ $kt->tanggal }}</span></span>
 															<!--end::Label-->
 															<!--begin::Action-->
-															<a href="#" class="btn btn-sm btn-primary">Baca</a>
+															<a href="#" class="btn btn-sm btn-primary">{{ $kt->tipe }}</a>
 															<!--end::Action-->
 														</div>
 														<!--end::Text-->
@@ -2146,6 +2158,8 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
 								
 							</div>
+
+							
 
 							
 						
