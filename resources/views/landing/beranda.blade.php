@@ -107,10 +107,7 @@ License: For each use you must have a valid license purchased only from above li
 															<div class="bgi-position-center bgi-no-repeat bgi-size-cover h-200px card-rounded" style="background-image:url('{{ $kt->file }}')"></div>
 															<!--end::Img-->
 															<!--begin::Play-->
-															<button class="btn btn-icon h-auto w-auto p-0 ms-4 mb-4 position-absolute bottom-0 right-0" data-kt-element="list-play-button">
-																<i class="bi bi-play-fill text-white fs-2x" data-kt-element="list-play-icon"></i>
-																<i class="bi bi-pause-fill text-white fs-2x d-none" data-kt-element="list-pause-icon"></i>
-															</button>
+															
 															<!--end::Play-->
 														</div>
 														<!--end::User pic-->
@@ -189,7 +186,7 @@ License: For each use you must have a valid license purchased only from above li
 															@if ($br->tipe == 'Daerah')
 															<a href="/berita/{{ $br->judul }}" class="text-white text-hover-primary fw-bold fs-2" >{{ $br->judul }}</a>
 															@else
-															<a href="{{ $br->link_berita }}" target="_blank" class="text-white text-hover-primary fw-bold fs-2" >{{ $br->judul }}</a>
+															<a href="{{ $br->link }}" target="_blank" class="text-white text-hover-primary fw-bold fs-2" >{{ $br->judul }}</a>
 															@endif
 															<!--end::Title-->
 														</div>
