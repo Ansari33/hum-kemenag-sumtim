@@ -150,7 +150,7 @@ Route::get('/migrate', function () {
 
 Route::get('/link', function () {
   Artisan::call('storage:link');
-  rettun 'success';
+  return 'success';
 });
 
 Route::get('/kecamatan', function () {
