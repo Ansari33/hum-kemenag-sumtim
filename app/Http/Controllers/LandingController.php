@@ -39,7 +39,8 @@ class LandingController extends Controller
 
     public function berita()
     {
-        return view('landing.berita');
+        $berita = Berita::paginate(8);
+        return view('landing.berita',compact('berita'));
     }
 
     public function bacaBerita($judul)
