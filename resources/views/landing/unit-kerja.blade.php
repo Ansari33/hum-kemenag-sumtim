@@ -1602,7 +1602,7 @@ License: For each use you must have a valid license purchased only from above li
               <!--begin::Row-->
               <div class="row g-5 g-xl-10 mb-5 mb-xl-10">
                 <!--begin::Col-->
-                <div class="col-xxl-6">
+                <div class="col-xxl-12">
                   <!--begin::Card widget 15-->
                   <div class="card card-flush h-xl-100">
                     <!--begin::Body-->
@@ -2071,6 +2071,9 @@ License: For each use you must have a valid license purchased only from above li
                 <!--end::Col-->
               </div>
               <!--end::Row-->
+              <div class="row">
+
+              </div>
 
               <!--begin::Documents toolbar-->
               <div class="d-flex flex-wrap flex-stack mb-6">
@@ -3236,57 +3239,10 @@ License: For each use you must have a valid license purchased only from above li
 
           <!--end::Container-->
 
-          <!--begin::Footer-->
-          <div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
-            <!--begin::Container-->
-            <div
-              class="container-xxl d-flex flex-column flex-md-row align-items-center justify-content-between"
-            >
-              <!--begin::Copyright-->
-              <div class="text-dark order-2 order-md-1">
-                <span class="text-muted fw-semibold me-1">2023&copy;</span>
-                <a
-                  href="https://keenthemes.com"
-                  target="_blank"
-                  class="text-gray-800 text-hover-primary"
-                  >Keenthemes</a
-                >
-              </div>
-              <!--end::Copyright-->
-              <!--begin::Menu-->
-              <ul
-                class="menu menu-gray-600 menu-hover-primary fw-semibold order-1"
-              >
-                <li class="menu-item">
-                  <a
-                    href="https://keenthemes.com"
-                    target="_blank"
-                    class="menu-link px-2"
-                    >About</a
-                  >
-                </li>
-                <li class="menu-item">
-                  <a
-                    href="https://devs.keenthemes.com"
-                    target="_blank"
-                    class="menu-link px-2"
-                    >Support</a
-                  >
-                </li>
-                <li class="menu-item">
-                  <a
-                    href="https://1.envato.market/EA4JP"
-                    target="_blank"
-                    class="menu-link px-2"
-                    >Purchase</a
-                  >
-                </li>
-              </ul>
-              <!--end::Menu-->
-            </div>
-            <!--end::Container-->
-          </div>
-          <!--end::Footer-->
+         
+          <!--begin::Footer Section-->
+					@include('landing.parts.footer')
+                    <!--end::Footer Section-->
         </div>
         <!--end::Wrapper-->
       </div>

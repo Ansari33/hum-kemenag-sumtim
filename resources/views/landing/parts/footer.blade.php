@@ -1,182 +1,153 @@
 <!--begin::Footer Section-->
-                <div class="mb-0">
-                    <!--begin::Curve top-->
-                    <div class="landing-curve landing-dark-color">
-                        <svg viewBox="15 -1 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 48C4.93573 47.6644 8.85984 47.3311 12.7725 47H1489.16C1493.1 47.3311 1497.04 47.6644 1501 48V47H1489.16C914.668 -1.34764 587.282 -1.61174 12.7725 47H1V48Z" fill="currentColor"></path>
-                        </svg>
-                    </div>
-                    <!--end::Curve top-->
-                    <!--begin::Wrapper-->
-                    <div class="landing-dark-bg pt-20">
-                        <!--begin::Container-->
-                        <div class="container">
-                            <!--begin::Row-->
-                            <div class="row py-10 py-lg-20">
-                                <!--begin::Col-->
-                                <div class="col-lg-6 pe-lg-16 mb-10 mb-lg-0">
-                                    <!--begin::Block-->
-                                    <div class="rounded landing-dark-border p-9 mb-10">
-                                        <!--begin::Title-->
-                                        <h2 class="text-white">Would you need a Custom License?</h2>
-                                        <!--end::Title-->
-                                        <!--begin::Text-->
-                                        <span class="fw-normal fs-4 text-gray-700">Email us to
-                                        <a href="https://keenthemes.com/support" class="text-white opacity-50 text-hover-primary">support@keenthemes.com</a></span>
-                                        <!--end::Text-->
-                                    </div>
-                                    <!--end::Block-->
-                                    <!--begin::Block-->
-                                    <div class="rounded landing-dark-border p-9">
-                                        <!--begin::Title-->
-                                        <h2 class="text-white">How About a Custom Project?</h2>
-                                        <!--end::Title-->
-                                        <!--begin::Text-->
-                                        <span class="fw-normal fs-4 text-gray-700">Use Our Custom Development Service.
-                                        <a href="../../demo2/dist/pages/user-profile/overview.html" class="text-white opacity-50 text-hover-primary">Click to Get a Quote</a></span>
-                                        <!--end::Text-->
-                                    </div>
-                                    <!--end::Block-->
-                                </div>
-                                <!--end::Col-->
-                                <!--begin::Col-->
-                                <div class="col-lg-6 ps-lg-16">
-                                    <!--begin::Navs-->
-                                    <div class="d-flex justify-content-center">
-                                        <!--begin::Links-->
-                                        <div class="d-flex fw-semibold flex-column me-20">
-                                            <!--begin::Subtitle-->
-                                            <h4 class="fw-bold text-gray-400 mb-6">More for Metronic</h4>
-                                            <!--end::Subtitle-->
-                                            <!--begin::Link-->
-                                            <a href="https://keenthemes.com/faqs" class="text-white opacity-50 text-hover-primary fs-5 mb-6">FAQ</a>
-                                            <!--end::Link-->
-                                            <!--begin::Link-->
-                                            <a href="https://preview.keenthemes.com/html/metronic/docs" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Documentaions</a>
-                                            <!--end::Link-->
-                                            <!--begin::Link-->
-                                            <a href="https://www.youtube.com/c/KeenThemesTuts/videos" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Video Tuts</a>
-                                            <!--end::Link-->
-                                            <!--begin::Link-->
-                                            <a href="https://preview.keenthemes.com/html/metronic/docs/getting-started/changelog" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Changelog</a>
-                                            <!--end::Link-->
-                                            <!--begin::Link-->
-                                            <a href="https://devs.keenthemes.com/" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Support Forum</a>
-                                            <!--end::Link-->
-                                            <!--begin::Link-->
-                                            <a href="https://keenthemes.com/blog" class="text-white opacity-50 text-hover-primary fs-5">Blog</a>
-                                            <!--end::Link-->
-                                        </div>
-                                        <!--end::Links-->
-                                        <!--begin::Links-->
-                                        <div class="d-flex fw-semibold flex-column ms-lg-20">
-                                            <!--begin::Subtitle-->
-                                            <h4 class="fw-bold text-gray-400 mb-6">Stay Connected</h4>
-                                            <!--end::Subtitle-->
-                                            <!--begin::Link-->
-                                            <a href="https://www.facebook.com/keenthemes" class="mb-6">
-                                                <img src="assets/media/svg/brand-logos/facebook-4.svg" class="h-20px me-2" alt="" />
-                                                <span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Facebook</span>
-                                            </a>
-                                            <!--end::Link-->
-                                            <!--begin::Link-->
-                                            <a href="https://github.com/KeenthemesHub" class="mb-6">
-                                                <img src="assets/media/svg/brand-logos/github.svg" class="h-20px me-2" alt="" />
-                                                <span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Github</span>
-                                            </a>
-                                            <!--end::Link-->
-                                            <!--begin::Link-->
-                                            <a href="https://twitter.com/keenthemes" class="mb-6">
-                                                <img src="assets/media/svg/brand-logos/twitter.svg" class="h-20px me-2" alt="" />
-                                                <span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Twitter</span>
-                                            </a>
-                                            <!--end::Link-->
-                                            <!--begin::Link-->
-                                            <a href="https://dribbble.com/keenthemes" class="mb-6">
-                                                <img src="assets/media/svg/brand-logos/dribbble-icon-1.svg" class="h-20px me-2" alt="" />
-                                                <span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Dribbble</span>
-                                            </a>
-                                            <!--end::Link-->
-                                            <!--begin::Link-->
-                                            <a href="https://www.instagram.com/keenthemes" class="mb-6">
-                                                <img src="assets/media/svg/brand-logos/instagram-2-1.svg" class="h-20px me-2" alt="" />
-                                                <span class="text-white opacity-50 text-hover-primary fs-5 mb-6">Instagram</span>
-                                            </a>
-                                            <!--end::Link-->
-                                        </div>
-                                        <!--end::Links-->
-                                    </div>
-                                    <!--end::Navs-->
-                                </div>
-                                <!--end::Col-->
-                            </div>
-                            <!--end::Row-->
-                        </div>
-                        <!--end::Container-->
-                        <!--begin::Separator-->
-                        <div class="landing-dark-separator"></div>
-                        <!--end::Separator-->
-                        <!--begin::Container-->
-                        <div class="container">
-                            <!--begin::Wrapper-->
-                            <div class="d-flex flex-column flex-md-row flex-stack py-7 py-lg-10">
-                                <!--begin::Copyright-->
-                                <div class="d-flex align-items-center order-2 order-md-1">
-                                    <!--begin::Logo-->
-                                    <a href="../../demo2/dist/landing.html">
-                                        <img alt="Logo" src="assets/media/logos/landing.svg" class="h-15px h-md-20px" />
-                                    </a>
-                                    <!--end::Logo image-->
-                                    <!--begin::Logo image-->
-                                    <span class="mx-5 fs-6 fw-semibold text-gray-600 pt-1" href="https://keenthemes.com">&copy; 2023 Keenthemes Inc.</span>
-                                    <!--end::Logo image-->
-                                </div>
-                                <!--end::Copyright-->
-                                <!--begin::Menu-->
-                                <ul class="menu menu-gray-600 menu-hover-primary fw-semibold fs-6 fs-md-5 order-1 mb-5 mb-md-0">
-                                    <li class="menu-item">
-                                        <a href="https://keenthemes.com" target="_blank" class="menu-link px-2">About</a>
-                                    </li>
-                                    <li class="menu-item mx-5">
-                                        <a href="https://devs.keenthemes.com" target="_blank" class="menu-link px-2">Support</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="" target="_blank" class="menu-link px-2">Purchase</a>
-                                    </li>
-                                </ul>
-                                <!--end::Menu-->
-                            </div>
-                            <!--end::Wrapper-->
-                        </div>
-                        <!--end::Container-->
-                    </div>
-                    <!--end::Wrapper-->
-                </div>
-                <!--end::Footer Section-->
-				<!--begin::Card footer-->
-				<div class="card-footer pt-4" id="kt_drawer_chat_messenger_footer">
-					<!--begin::Input-->
-					<textarea class="form-control form-control-flush mb-3" rows="1" data-kt-element="input" placeholder="Type a message"></textarea>
-					<!--end::Input-->
-					<!--begin:Toolbar-->
-					<div class="d-flex flex-stack">
-						<!--begin::Actions-->
-						<div class="d-flex align-items-center me-2">
-							<button class="btn btn-sm btn-icon btn-active-light-primary me-1" type="button" data-bs-toggle="tooltip" title="Coming soon">
-								<i class="ki-duotone ki-paper-clip fs-3"></i>
-							</button>
-							<button class="btn btn-sm btn-icon btn-active-light-primary me-1" type="button" data-bs-toggle="tooltip" title="Coming soon">
-								<i class="ki-duotone ki-cloud-add fs-3">
-									<span class="path1"></span>
-									<span class="path2"></span>
-								</i>
-							</button>
-						</div>
-						<!--end::Actions-->
-						<!--begin::Send-->
-						<button class="btn btn-primary" type="button" data-kt-element="send">Send</button>
-						<!--end::Send-->
+<div class="mb-0">
+	<!--begin::Curve top-->
+	
+	<!--end::Curve top-->
+	<!--begin::Wrapper-->
+	<div class="landing-dark-bg pt-20">
+		<!--begin::Container-->
+		<div class="container">
+			<!--begin::Row-->
+			<div class="row py-10 py-lg-20">
+				<!--begin::Col-->
+				<div class="col-lg-5 pe-lg-16 mb-10 mb-lg-0">
+					<!--begin::Block-->
+					<div class="rounded landing-dark-border p-9 mb-10">
+						<!--begin::Title-->
+						<h2 class="text-white">Kantor Kementerian Agama Kabupaten Sumba Timur</h2>
+						<!--end::Title-->
+						<!--begin::Text-->
+						<span class="fw-normal fs-4 text-gray-700">
+						<img src="/assets/media/icons/duotone/general/gen018.svg" class="h-20px me-2" alt="" /><a href="https://keenthemes.com/support" class="text-white opacity-50 text-hover-primary"><i class="fa fa-map"></i>  Jalan L.D Dapawole No.14b Waingapu</a></span>
+						<!--end::Text-->
 					</div>
-					<!--end::Toolbar-->
+					<!--end::Block-->
+					<!--begin::Block-->
+					<div class="rounded landing-dark-border p-9">
+						<!--begin::Title-->
+						<h2 class="text-white">Kontak Kami</h2>
+						<!--end::Title-->
+						<!--begin::Text-->
+						<span class="fw-normal fs-4 text-gray-700">
+						<a href="#" class="text-white opacity-50 text-hover-primary"> <i class="fa fa-phone"></i> 0387614614</a></span><br>
+						<span class="fw-normal fs-4 text-gray-700">
+						<a href="#" class="text-white opacity-50 text-hover-primary"><i class="fa fa-fax"></i> 038762620</a></span><br>
+						<span class="fw-normal fs-4 text-gray-700">
+						<a href="#" class="text-white opacity-50 text-hover-primary"><i class="fa fa-envelope"></i> kabsumtimur@kemenag.go.id</a></span>
+						<!--end::Text-->
+					</div>
+					<!--end::Block-->
 				</div>
-				<!--end::Card footer-->
+				<!--end::Col-->
+				<!--begin::Col-->
+				<div class="col-lg-6 ps-lg-16">
+					<!--begin::Navs-->
+					<div class="d-flex justify-content-center">
+						<!--begin::Links-->
+						<div class="d-flex fw-semibold flex-column me-20">
+							<!--begin::Subtitle-->
+							<h4 class="fw-bold text-gray-400 mb-6">Kemenag</h4>
+							<!--end::Subtitle-->
+							<!--begin::Link-->
+							<a href="https://kemenag.go.id" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Kemenag RI</a>
+							<!--end::Link-->
+							<!--begin::Link-->
+							<a href="https://ntt.kemenag.go.id" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Kanwil NTT</a>
+							<!--end::Link-->
+							<!--begin::Link-->
+							<a href="https://pusaka.kemenag.go.id" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Pusaka</a>
+							<!--end::Link-->
+							<!--begin::Link-->
+							<a href="https://flobamorata.kemenag.go.id/" class="text-white opacity-50 text-hover-primary fs-5 mb-6">Flobamorata</a>
+							<!--end::Link-->
+							
+						</div>
+						<!--end::Links-->
+						<!--begin::Links-->
+						<div class="d-flex fw-semibold flex-column ms-lg-20">
+							<!--begin::Subtitle-->
+							<h4 class="fw-bold text-gray-400 mb-6">Media Kami</h4>
+							<!--end::Subtitle-->
+							<!--begin::Link-->
+							<a href="https://facebook.com/kemenag.sumbatimur/" class="mb-6">
+								<img src="" class="h-20px me-2" alt="" />
+								
+								<span class="text-white  text-hover-primary fs-5 mb-6">Facebook</span>
+							</a>
+							<!--end::Link-->
+							<!--begin::Link-->
+							<a href="https://www.tiktok.com/@sumtimkemenag" class="mb-6" target="_blank">
+								<img src="" class="h-20px me-2" alt="" />
+								<span class="text-white  text-hover-primary fs-5 mb-6">Tiktok</span>
+							</a>
+							<!--end::Link-->
+							<!--begin::Link-->
+							<a href="https://twitter.com/keenthemes" class="mb-6">
+								<img src="" class="h-20px me-2" alt="" />
+								<span class="text-white  text-hover-primary fs-5 mb-6">X</span>
+							</a>
+							<!--end::Link-->
+							<!--begin::Link-->
+							<a href="https://www.youtube.com/@kemenagsumbatimur" class="mb-6">
+								<img src="" class="h-20px me-2" alt="" />
+								<span class="text-white  text-hover-primary fs-5 mb-6">Youtube</span>
+							</a>
+							<!--end::Link-->
+							<!--begin::Link-->
+							<a href="https://www.instagram.com/kemenag_sumtim/" class="mb-6">
+								<img src="" class="h-20px me-2" alt="" />
+								
+								<span class="text-white  text-hover-primary fs-5 mb-6">Instagram</span>
+								
+							</a>
+							<!--end::Link-->
+						</div>
+						<!--end::Links-->
+					</div>
+					<!--end::Navs-->
+				</div>
+				<!--end::Col-->
+			</div>
+			<!--end::Row-->
+		</div>
+		<!--end::Container-->
+		<!--begin::Separator-->
+		<div class="landing-dark-separator"></div>
+		<!--end::Separator-->
+		<!--begin::Container-->
+		<div class="container">
+			<!--begin::Wrapper-->
+			<div class="d-flex flex-column flex-md-row flex-stack py-7 py-lg-10">
+				<!--begin::Copyright-->
+				<div class="d-flex align-items-center order-2 order-md-1">
+					<!--begin::Logo-->
+					<a href="../../demo2/dist/landing.html">
+						<img alt="Logo" src="assets/media/logos/kemenag_logo.ico" class="h-15px h-md-20px" />
+					</a>
+					<!--end::Logo image-->
+					<!--begin::Logo image-->
+					<span class="mx-5 fs-6 fw-semibold text-gray-600 pt-1" href="/">&copy; 2026 Humas Kemenag Sumba Timur.</span>
+					<!--end::Logo image-->
+				</div>
+				<!--end::Copyright-->
+				<!--begin::Menu-->
+				<ul class="menu menu-gray-600 menu-hover-primary fw-semibold fs-6 fs-md-5 order-1 mb-5 mb-md-0">
+					<li class="menu-item">
+						<a href="/profil/sejarah" target="_blank" class="menu-link px-2">Tentang</a>
+					</li>
+					<li class="menu-item mx-5">
+						<a href="https://devs.keenthemes.com" target="_blank" class="menu-link px-2">Support</a>
+					</li>
+					<li class="menu-item">
+						<a href="" target="_blank" class="menu-link px-2">Purchase</a>
+					</li>
+				</ul>
+				<!--end::Menu-->
+			</div>
+			<!--end::Wrapper-->
+		</div>
+		<!--end::Container-->
+	</div>
+	<!--end::Wrapper-->
+</div>
+<!--begin::Footer Section-->

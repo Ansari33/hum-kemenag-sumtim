@@ -1821,7 +1821,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Member-->
 											<div class="d-flex flex-column text-center mb-9 px-9">
 												<!--begin::Photo-->
-												<div class="symbol symbol-80px symbol-lg-150px mb-4">
+												<div class="symbol symbol-100px symbol-lg-150px mb-4">
 													<img src="assets/media/ptsp/kantor.jpeg" class="" alt="" />
 												</div>
 												<!--end::Photo-->

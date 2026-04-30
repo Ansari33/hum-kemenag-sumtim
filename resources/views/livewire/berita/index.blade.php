@@ -28,7 +28,7 @@
           <thead>
             <tr>
               <th>Judul</th>
-              <th>Isi</th>
+              <th>Tanggal</th>
               <th>Tipe</th>
               <th>Actions</th>
             </tr>
@@ -40,7 +40,7 @@
                 <i class="icon-base fab fa-angular text-danger me-4"></i>
                 <span class="fw-medium">{{ $p->judul }}</span>
               </td>
-              <td>{{ substr($p->isi,0,16)  }}</td>
+              <td>{{ ($p->tanggal)  }}</td>
               <td>{{ $p->tipe }}</td>
               
               <td>
