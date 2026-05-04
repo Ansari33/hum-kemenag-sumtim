@@ -41,7 +41,7 @@ License: For each use you must have a valid license purchased only from above li
 							<!--end::Heaeder menu toggle-->
 							<!--begin::Header Logo-->
 							<div class="header-logo me-5 me-md-10 flex-grow-1 flex-lg-grow-0">
-								<a href="../../demo2/dist/index.html">
+								<a href="/">
 									<img alt="Logo" src="assets/media/logos/logok.png" class="logo-default h-25px" />
 									<img alt="Logo" src="assets/media/logos/logok.png" class="logo-sticky h-25px" />
 								
@@ -69,7 +69,18 @@ License: For each use you must have a valid license purchased only from above li
 					<!--begin::Container-->
 					<div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
 						<!--begin::Post-->
-						<div class="content flex-row-fluid" id="kt_content">
+						<div class="content flex-row-fluid " id="kt_content">
+							<div class="card h-150px card-xl-stretch mb-2" style="background-image:url('/landing/assets/media/ptsp/berdampak.jpg'); background-size: cover; background-position: center;">
+								<!--begin::Body-->
+								<div class="card-body d-flex align-items-center justify-content-between flex-wrap">
+									<div class="me-2">
+										<h2 class="fw-bold text-gray-800 mb-3"></h2>
+										<div class="text-muted fw-semibold fs-6"></div>
+									</div>
+									
+								</div>
+								<!--end::Body-->
+							</div>
                             <!--begin::Row-->
 							<div class="row g-5 g-xl-10 mb-5 mb-xl-10">
 								<!--begin::Col-->
@@ -85,9 +96,11 @@ License: For each use you must have a valid license purchased only from above li
 											</h3>
 											<!--end::Title-->
 											<!--begin::Toolbar-->
-											<div class="card-toolbar">
-												<a href="../../demo2/dist/account/statements.html" class="btn btn-sm btn-light">Selengkapnya</a>
-											</div>
+											{{--
+											// <div class="card-toolbar">
+											// 	<a href="../../demo2/dist/account/statements.html" class="btn btn-sm btn-light">Selengkapnya</a>
+											// </div> 
+											--}}
 											<!--end::Toolbar-->
 										</div>
 										<!--end::Header-->
@@ -102,9 +115,9 @@ License: For each use you must have a valid license purchased only from above li
 													<!--begin::Player card-->
 													<div class="m-0">
 														<!--begin::User pic-->
-														<div class="card-rounded position-relative mb-5">
+														<div class="card-rounded position-relative mb-1">
 															<!--begin::Img-->
-															<div class="bgi-position-center bgi-no-repeat bgi-size-cover h-200px card-rounded" style="background-image:url('{{ $kt->file }}')"></div>
+															<div class="bgi-position-center bgi-no-repeat bgi-size-cover h-200px card-rounded" style="background-image:url('/gambar-file/{{ $kt->file }}')"></div>
 															<!--end::Img-->
 															<!--begin::Play-->
 															
@@ -240,15 +253,18 @@ License: For each use you must have a valid license purchased only from above li
 							</div>
 							<!--end::Row-->
 
+							
+							{{-- 
 							<!--begin::Row-->
 							<div class="row gy-5 g-xl-8">
 								<!--begin::Col-->
 								
 								<!--end::Col-->
 								<!--begin::Col-->
-								<div class="col-xl-6">
+								
+								<div class="col-xl-6 ">
 									<!--begin::Tables Widget 9-->
-									<div class="card card-xl-stretch mb-5 mb-xl-8">
+									<div class="card card-xl-stretch mb-5 mb-xl-8 ">
 										<!--begin::Header-->
 										<div class="card-header border-0 pt-5">
 											<h3 class="card-title align-items-start flex-column">
@@ -262,7 +278,7 @@ License: For each use you must have a valid license purchased only from above li
 										</div>
 										<!--end::Header-->
 										<!--begin::Body-->
-										<div class="card-body py-3">
+										<div class="card-body py-3" >
 											<!--begin::Table container-->
 											<div class="table-responsive">
 												<!--begin::Table-->
@@ -761,50 +777,58 @@ License: For each use you must have a valid license purchased only from above li
 								<!--end::Col-->
 							</div>
 							<!--end::Row-->
-
-							<!--begin::Team Section-->
-			<div class="py-10 py-lg-20">
-				<!--begin::Container-->
-				<div class="container">
-					<!--begin::Heading-->
-				
-					<!--end::Heading-->
-					<!--begin::Slider-->
-					<div class="tns tns-default" style="direction: ltr">
-						<!--begin::Wrapper-->
-						<div data-tns="true" data-tns-loop="true" data-tns-swipe-angle="false" data-tns-speed="2000" data-tns-autoplay="true" data-tns-autoplay-timeout="18000" data-tns-controls="true" data-tns-nav="false" data-tns-items="1" data-tns-center="false" data-tns-dots="false" data-tns-prev-button="#kt_team_slider_prev" data-tns-next-button="#kt_team_slider_next" data-tns-responsive="{1200: {items: 3}, 992: {items: 2}}">
+							--}}
 							
-						@for($x=1;$x<=7;$x++)
-							<!--begin::Item-->
-							<div class="text-center">
-								<!--begin::Photo-->
-								<div class=" mx-auto mb-5 d-flex w-350px h-400px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/ptsp/ucapan ({{$x}}).jpeg')"></div>
-								<!--end::Photo-->
-								<!--begin::Person-->
-							
-								<!--end::Person-->
+							<div class="row gy-5 g-xl-8">
+								<div class="col-lg-12  card-lg-stretch mb-2 ">
+								<!--begin::Slider-->
+									<div class="tns tns-default" style="direction: ltr">
+										<!--begin::Wrapper-->
+										<div data-tns="true" data-tns-loop="true" data-tns-swipe-angle="false" data-tns-speed="2000" data-tns-autoplay="true" data-tns-autoplay-timeout="18000" data-tns-controls="true" data-tns-nav="false" data-tns-items="1" data-tns-center="false" data-tns-dots="false" data-tns-prev-button="#kt_team_slider_prev" data-tns-next-button="#kt_team_slider_next" data-tns-responsive="{1200: {items: 3}, 992: {items: 2}}">
+											
+										@for($x=1;$x<=7;$x++)
+											<!--begin::Item-->
+											<div class="text-center">
+												<!--begin::Photo-->
+												<div class=" mx-auto mb-5 d-flex w-350px h-400px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/ptsp/ucapan ({{$x}}).jpeg')"></div>
+												<!--end::Photo-->
+												<!--begin::Person-->
+											
+												<!--end::Person-->
+											</div>
+											<!--end::Item-->
+										@endfor	
+											
+										</div>
+										<!--end::Wrapper-->
+										<!--begin::Button-->
+										<button class="btn btn-icon btn-active-color-primary" id="kt_team_slider_prev">
+											<i class="ki-duotone ki-left fs-2x"></i>
+										</button>
+										<!--end::Button-->
+										<!--begin::Button-->
+										<button class="btn btn-icon btn-active-color-primary" id="kt_team_slider_next">
+											<i class="ki-duotone ki-right fs-2x"></i>
+										</button>
+										<!--end::Button-->
+									</div>
+									<!--end::Slider-->
+								</div>
 							</div>
-							<!--end::Item-->
-						@endfor	
-							
-						</div>
-						<!--end::Wrapper-->
-						<!--begin::Button-->
-						<button class="btn btn-icon btn-active-color-primary" id="kt_team_slider_prev">
-							<i class="ki-duotone ki-left fs-2x"></i>
-						</button>
-						<!--end::Button-->
-						<!--begin::Button-->
-						<button class="btn btn-icon btn-active-color-primary" id="kt_team_slider_next">
-							<i class="ki-duotone ki-right fs-2x"></i>
-						</button>
-						<!--end::Button-->
-					</div>
-					<!--end::Slider-->
-				</div>
-				<!--end::Container-->
-			</div>
-			<!--end::Team Section-->
+							<!--begin::Team Section-->
+							<div class="py-1 py-lg-2">
+								<!--begin::Container-->
+								<div class="container-fluid">
+									<!--begin::Heading-->
+								
+									<!--end::Heading-->
+									<!--begin::Slider-->
+									
+									<!--end::Slider-->
+								</div>
+								<!--end::Container-->
+							</div>
+							<!--end::Team Section-->
 
 							<div class="row gy-5 g-xl-8">
 								<div class="col-xl-12">

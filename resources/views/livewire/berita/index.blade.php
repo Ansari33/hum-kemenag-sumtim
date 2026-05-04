@@ -52,7 +52,7 @@
                     <i class="icon-base bx bx-dots-vertical-rounded"></i>
                   </button>
                   <div class="dropdown-menu">
-                    <a class="dropdown-item" href="/konten/edit/{{$p->id}}" wire:navigate
+                    <a class="dropdown-item" href="/publikasi/berita/edit/{{$p->id}}" wire:navigate
                       ><i class="icon-base bx bx-edit-alt me-1"></i>Edit</a
                     >
                     <button class="dropdown-item" wire:click="confirmDelete('{{ $p->judul }}')"

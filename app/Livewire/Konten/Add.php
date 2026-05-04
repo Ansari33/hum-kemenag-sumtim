@@ -6,9 +6,14 @@ use Livewire\Component;
 use App\Models\Konten;  
 use DB;
 use Jantinnerezo\LivewireAlert\Facades\LivewireAlert;
+use Livewire\Features\SupportFileUploads\WithFileUploads;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage; 
 
 class Add extends Component
 {
+    use WithFileUploads;
+    
     public $judul;
     public $tanggal;
     public $deskripsi;
@@ -21,14 +26,19 @@ class Add extends Component
 
     public function submit()
     {
+
         DB::beginTransaction();
         try {
+            $gambar = str()->random(20);
+            ($this->foto) ?
+            ($this->foto)->storePubliclyAs('/gambar', $gambar . '.' . ($this->foto)->extension()) : 
+            null;
 
             Konten::create([
                 'judul'      => $this->judul,
                 'tanggal'    => $this->tanggal,
                 'deskripsi'  => $this->deskripsi,
-                'file'       => $this->foto,
+                'file'       => $gambar . '.' . ($this->foto)->extension(),
             ]);
 
             LivewireAlert::title('Konten Berhasil Ditambahkan!')
