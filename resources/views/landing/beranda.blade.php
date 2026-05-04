@@ -857,12 +857,10 @@ License: For each use you must have a valid license purchased only from above li
 												<!--begin::Hot sales post-->
 												<div class="card-xl-stretch me-md-6">
 													<!--begin::Overlay-->
-													<a class="d-block overlay" data-fslightbox="lightbox-hot-sales" href="assets/media/stock/600x400/img-23.jpg">
+													<a class="d-block overlay" data-fslightbox="lightbox-hot-sales" @if($kt->tipe == 'Daerah') href="/gambar-file/{{  $kt->gambar }}" @else href="{{ $kt->link_gambar }}"  @endif>
 														<!--begin::Image-->
 														@if($kt->tipe == 'Daerah')
-														@php
-														$image = asset('storage/berita/'.$kt->gambar);
-														@endphp
+														
 														<div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded min-h-175px"  style="background-image:url('/gambar-file/{{  $kt->gambar }}')"></div>
 														<!--end::Image-->
 														@else
