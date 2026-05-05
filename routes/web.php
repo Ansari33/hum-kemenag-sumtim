@@ -109,6 +109,30 @@ Route::middleware(['auth', 'verified'])->prefix('laporan-kinerja')->group(functi
     
   });
 
+  Route::middleware(['auth', 'verified'])->prefix('data')->group(function () {
+      Route::prefix('ummat')->group(function () {
+        Volt::route('/', 'ummat.index')->name('ummat');
+        Volt::route('add', 'ummat.add')->name('ummat.add');
+        Volt::route('edit/{id}', 'ummat.edit')->name('ummat.edit');
+        Route::get('/delete/{id}', [DataInformasiController::class, 'deleteUmmat'])->name('ummat.delete');    
+    });
+
+    Route::prefix('rumah-ibadah')->group(function () {
+        Volt::route('/', 'rumah-ibadah.index')->name('rumah-ibadah');
+        Volt::route('add', 'rumah-ibadah.add')->name('rumah-ibadah.add');
+        Volt::route('edit/{id}', 'rumah-ibadah.edit')->name('rumah-ibadah.edit');
+        Route::get('/delete/{id}', [DataInformasiController::class, 'deleteRumahIbadah'])->name('rumah-ibadah.delete');    
+    });
+
+    Route::prefix('pendidikan')->group(function () {
+        Volt::route('/', 'pendidikan.index')->name('pendidikan');
+        Volt::route('add', 'pendidikan.add')->name('pendidikan.add');
+        Volt::route('edit/{id}', 'pendidikan.edit')->name('pendidikan.edit');
+        Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('data-informasi.delete');    
+    });
+    
+  });
+
 
   Route::middleware(['auth', 'verified'])->prefix('zi')->group(function () {
       

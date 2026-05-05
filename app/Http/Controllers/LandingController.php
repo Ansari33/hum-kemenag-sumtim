@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Berita;
 use Illuminate\Http\Request;
 use App\Models\Konten;
+use App\Models\Ummat;
+use App\Models\RumahIbadah;
 
 class LandingController extends Controller
 {
@@ -53,7 +55,9 @@ class LandingController extends Controller
 
     public function dataKeagamaan()
         {
-            return view('landing.data-keagamaan');
+            $data = Ummat::get();
+            $ibadah = RumahIbadah::get();
+            return view('landing.data-keagamaan', compact('data', 'ibadah'));
         }
 
     public function dataPendidikan()

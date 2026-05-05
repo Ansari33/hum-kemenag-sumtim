@@ -40,14 +40,7 @@ License: For each use you must have a valid license purchased only from above li
 							</div>
 							<!--end::Heaeder menu toggle-->
 							<!--begin::Header Logo-->
-							<div class="header-logo me-5 me-md-10 flex-grow-1 flex-lg-grow-0">
-								<a href="/">
-									<img alt="Logo" src="assets/media/logos/logo.svg" class="logo-default h-45px" />
-									<img alt="Logo" src="assets/media/logos/logok.png" class="logo-sticky h-25px" />
-								
-                                    </a>
-                                
-							</div>
+							@include('landing.parts.logo')
 							<!--end::Header Logo-->
 							<!--begin::Wrapper-->
 							<div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">

@@ -64,11 +64,14 @@
         <div class="text-truncate">{{ __('Data') }}</div>
       </a>
       <ul class="menu-sub">
-        <li class="menu-item {{ request()->routeIs('laporan-kinerja*') ? 'active' : '' }}">
-          <a class="menu-link" href="{{ route('laporan-kinerja') }}" wire:navigate>{{ __('Keagamaan') }}</a>
+        <li class="menu-item {{ request()->routeIs('ummat*') ? 'active' : '' }}">
+          <a class="menu-link" href="{{ route('ummat') }}" wire:navigate>{{ __('Keagamaan') }}</a>
         </li>
-        <li class="menu-item {{ request()->routeIs('tugas*') ? 'active' : '' }}">
-          <a class="menu-link" href="{{ route('tugas') }}" wire:navigate>{{ __('Pendidikan') }}</a>
+        <li class="menu-item {{ request()->routeIs('rumah-ibadah*') ? 'active' : '' }}">
+          <a class="menu-link" href="{{ route('rumah-ibadah') }}" wire:navigate>{{ __('Rumah Ibadah') }}</a>
+        </li>
+        <li class="menu-item {{ request()->routeIs('pendidikan*') ? 'active' : '' }}">
+          <a class="menu-link" href="{{ route('pendidikan') }}" wire:navigate>{{ __('Pendidikan') }}</a>
         </li>
         <li class="menu-item {{ request()->routeIs('pegawai*') ? 'active' : '' }}">
           <a class="menu-link" href="{{ route('pegawai') }}" wire:navigate>{{ __('Pegawai') }}</a>
