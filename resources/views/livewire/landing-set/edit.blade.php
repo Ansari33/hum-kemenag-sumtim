@@ -17,7 +17,7 @@
         <div class="mb-4 row">
           <label for="html5-url-input" class="col-md-2 col-form-label">Preview</label>
           <div class="col-md-9">
-            <img src="@if($elemen) {{ $elemen->temporaryUrl() }} @endif" width="600px;" alt="">
+            <img src="@if($namaElemen && !$elemen ) /gambar-file/{{ $namaElemen }} @elseif($elemen) {{ $elemen->temporaryUrl() }} @endif" width="600px;" alt="">
           </div>
           
         </div>

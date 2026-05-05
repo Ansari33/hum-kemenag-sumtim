@@ -63,7 +63,7 @@ License: For each use you must have a valid license purchased only from above li
 					<div id="kt_content_container" class="d-flex flex-column-fluid align-items-start container-xxl">
 						<!--begin::Post-->
 						<div class="content flex-row-fluid " id="kt_content">
-							<div class="card h-150px card-xl-stretch mb-2" style="background-image:url('/landing/assets/media/ptsp/berdampak.jpg'); background-size: cover; background-position: center;">
+							<div class="card h-150px card-xl-stretch mb-2" style="background-image:url('/gambar-file/{{ $landing['banner_top'] }}'); background-size: cover; background-position: center;">
 								<!--begin::Body-->
 								<div class="card-body d-flex align-items-center justify-content-between flex-wrap">
 									<div class="me-2">
@@ -215,7 +215,7 @@ License: For each use you must have a valid license purchased only from above li
 								<!--begin::Col-->
 								<div class="col-xl-4 mb-5 mb-xl-10">
 									<!--begin::Slider Widget 2-->
-									<div id="kt_sliders_widget_2_slider" class="card card-flush carousel carousel-custom carousel-stretch slide h-xl-100 bgi-no-repeat bgi-size-cover bgi-position-y-center" data-bs-ride="carousel" data-bs-interval="5500" style="background-image:url('/landing/assets/media/ptsp/infop.jpg')">
+									<div id="kt_sliders_widget_2_slider" class="card card-flush carousel carousel-custom carousel-stretch slide h-xl-100 bgi-no-repeat bgi-size-cover bgi-position-y-center" data-bs-ride="carousel" data-bs-interval="5500" style="background-image:url('/gambar-file/{{ $landing['info'] }}')">
 										<!--begin::Header-->
 										<div class="card-header pt-5">
 											<!--begin::Title-->

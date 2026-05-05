@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Berita;
 use Illuminate\Http\Request;
 use App\Models\Konten;
+use App\Models\LandingSet;
 use App\Models\Ummat;
 use App\Models\RumahIbadah;
 
@@ -16,7 +17,8 @@ class LandingController extends Controller
     {
         $konten = Konten::latest()->take(6)->get();
         $berita = Berita::latest()->take(5)->get();
-        return view('landing.beranda', compact('konten', 'berita'));
+        $landing = LandingSet::all()->pluck('file','elemen')->toArray();
+        return view('landing.beranda', compact('konten', 'berita', 'landing'));
     }
 
     public function sejarah()

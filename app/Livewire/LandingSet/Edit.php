@@ -14,6 +14,7 @@ class Edit extends Component
     public $namaFile;
     public $elemen;
     public $namaElemen;
+    public $id;
 
     public function render()
     {
@@ -26,7 +27,9 @@ class Edit extends Component
         $landingSet = LandingSet::findOrFail($id);
         $this->namaFile = $landingSet->file;
         $this->elemen = null;
-        $this->namaElemen = $landingSet->nama;
+        $this->namaElemen = $landingSet->file;
+        $this->id = $id;
+
 
     }
 
@@ -36,15 +39,21 @@ class Edit extends Component
 
         $landingSet = LandingSet::findOrFail($this->id);
         
-        ($this->elemen) ?
-        ($this->elemen)->storePubliclyAs('/gambar', $this->namaElemen . '.' . $this->elemen->extension()) : 
-        null;
+        if ($this->elemen) {
+           ($this->elemen)->storePubliclyAs('/gambar', $this->namaElemen . '.' . $this->elemen->extension());
+           $this->namaFile = $this->namaElemen . '.' . $this->elemen->extension();
+        }
+
+        // $namaFile = $landingSet->file ? $this->namaElemen . '.' . $this->elemen->extension() : $this->namaElemen;
+        // ($this->elemen) ?
+        //  : 
+        // null;
         LivewireAlert::title('Elemen Berhasil Diupdate!')
         ->success()
         ->show(); 
-
+        $landingSet->file = $this->namaFile;
         $landingSet->save();
 
-        return redirect()->route('landing-set');
+        return $this->redirect('/landing-set', navigate: true); 
     }
 }
