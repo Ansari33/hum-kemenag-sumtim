@@ -18,7 +18,7 @@
 						<!--end::Title-->
 						<!--begin::Text-->
 						<span class="fw-normal fs-4 text-gray-700">
-						<img src="/assets/media/icons/duotone/general/gen018.svg" class="h-20px me-2" alt="" /><a href="https://keenthemes.com/support" class="text-white opacity-50 text-hover-primary"><i class="fa fa-map"></i>  Jalan L.D Dapawole No.14b Waingapu</a></span>
+						<a href="https://keenthemes.com/support" class="text-white opacity-50 text-hover-primary"><i class="fa fa-map"></i>  Jalan L.D Dapawole No.14b Waingapu</a></span>
 						<!--end::Text-->
 					</div>
 					<!--end::Block-->
