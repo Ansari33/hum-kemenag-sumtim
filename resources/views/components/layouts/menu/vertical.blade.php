@@ -95,8 +95,12 @@
     </li> -->
 
      <li class="menu-item {{ request()->is('zi*') ? 'active' : '' }}">
-      <a class="menu-link" href="{{ route('zi') }}" wire:navigate> <i class="menu-icon tf-icons bx bx-shield"></i>{{ __('Zona Integritas') }}</a>
-    </li>
+        <a class="menu-link" href="{{ route('zi') }}" wire:navigate> <i class="menu-icon tf-icons bx bx-shield"></i>{{ __('Zona Integritas') }}</a>
+      </li>
+
+      <li class="menu-item {{ request()->is('landing-set*') ? 'active' : '' }}">
+        <a class="menu-link" href="{{ route('landing-set') }}" wire:navigate> <i class="menu-icon tf-icons bx bx-pen"></i>{{ __('Landing Set') }}</a>
+      </li>
 
     <li class="menu-item {{ (request()->is('laporan-kinerja*') or request()->is('tugas*')) ? 'active open' : '' }}">
       <a href="javascript:void(0);" class="menu-link menu-toggle">

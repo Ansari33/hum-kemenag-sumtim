@@ -67,6 +67,6 @@ class Edit extends Component
             ->success()
             ->show();
 
-        return redirect()->route('ummat');
+        return $this->redirect('/data/ummat', navigate: true);
     }
 }

@@ -16,7 +16,7 @@ class Index extends Component
     use WithPagination;
     public function render()
     {
-        $data = Ummat::where('kecamatan','like','%'.$this->search.'%')->paginate(15);
+        $data = Ummat::where('kecamatan','like','%'.$this->search.'%')->get();
         return view('livewire.ummat.index', compact('data'));
     }
 

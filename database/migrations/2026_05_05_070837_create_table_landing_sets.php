@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('beritas', function (Blueprint $table) {
+        Schema::create('landing_sets', function (Blueprint $table) {
             $table->id();
-            $table->string('judul');
-            $table->text('isi');
-            $table->string('gambar')->nullable();
-            $table->string('tipe');
-            $table->string('link')->nullable();
-            $table->string('link_gambar')->nullable();
+            $table->string('elemen');
+            $table->string('file')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('beritas');
+        Schema::dropIfExists('landing_sets');
     }
 };

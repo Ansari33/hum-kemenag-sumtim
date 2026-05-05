@@ -54,7 +54,7 @@ class Add extends Component
             ->success()
             ->show();
 
-        return redirect()->route('rumah-ibadah');
+        return $this->redirect('/publikasi/konten', navigate: true);
         } catch (\Exception $th) {
             LivewireAlert::title('Gagal Menyimpan Data!')
                 ->text($th->getMessage())

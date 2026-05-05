@@ -68,7 +68,7 @@ class Edit extends Component
                 ->success()
                 ->show();
 
-        return redirect()->route('rumah-ibadah');
+        return $this->redirect('/data/rumah-ibadah', navigate: true);
         } catch (\Throwable $th) {
             LivewireAlert::title('Gagal Mengupdate Data!')
                 ->text($th->getMessage())

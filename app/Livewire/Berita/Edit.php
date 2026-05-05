@@ -59,7 +59,7 @@ class Edit extends Component
 
             DB::commit();
         
-            return redirect()->route('berita');   
+            return $this->redirect('/publikasi/berita', navigate: true);  
         } catch (\Exception $e) {
             DB::rollback();
             LivewireAlert::title('Gagal!')

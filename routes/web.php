@@ -109,6 +109,13 @@ Route::middleware(['auth', 'verified'])->prefix('laporan-kinerja')->group(functi
     
   });
 
+  Route::prefix('landing-set')->group(function () {
+      Volt::route('/', 'landing-set.index')->name('landing-set');
+     // Volt::route('add', 'ummat.add')->name('ummat.add');
+      Volt::route('edit/{id}', 'landing-set.edit')->name('landing-set.edit');
+    //  Route::get('/delete/{id}', [DataInformasiController::class, 'deleteUmmat'])->name('ummat.delete');    
+  });
+
   Route::middleware(['auth', 'verified'])->prefix('data')->group(function () {
       Route::prefix('ummat')->group(function () {
         Volt::route('/', 'ummat.index')->name('ummat');

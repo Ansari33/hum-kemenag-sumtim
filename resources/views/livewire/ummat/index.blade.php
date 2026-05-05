@@ -79,7 +79,7 @@
 
       <nav aria-label="Page navigation " class="m-2">
 
-      {{ $data->links() }}
+      
 
     </nav>
     </div>

@@ -55,7 +55,7 @@ class Edit extends Component
 
             DB::commit();
         
-            return redirect()->route('konten');   
+            return $this->redirect('/publikasi/konten', navigate: true);   
         } catch (\Exception $e) {
             DB::rollback();
             LivewireAlert::title('Gagal!')
@@ -63,7 +63,7 @@ class Edit extends Component
             ->warning()
             ->show();
             session()->flash('error', $e->getMessage());
-            return redirect()->route('publikasi.konten.edit', ['id' => $this->id]);
+           // return $this->redirect('/publikasi/konten/edit/' . $this->id, navigate: true);
         }
 
         
