@@ -19,7 +19,6 @@
           <div class="col-md-9">
             <img src="@if($namaElemen && !$elemen ) /gambar-file/{{ $namaFile }} @elseif($elemen) {{ $elemen->temporaryUrl() }} @endif" style="max-width: 100%; max-height: 500px;" alt="">
           </div>
-          
         </div>
         <button type="submit" class="btn me-2 btn-success" >Simpan</button>
       </form>
