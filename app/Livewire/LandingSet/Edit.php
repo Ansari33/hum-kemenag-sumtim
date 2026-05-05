@@ -27,7 +27,7 @@ class Edit extends Component
         $landingSet = LandingSet::findOrFail($id);
         $this->namaFile = $landingSet->file;
         $this->elemen = null;
-        $this->namaElemen = $landingSet->file;
+        $this->namaElemen = $landingSet->elemen;
         $this->id = $id;
 
 
