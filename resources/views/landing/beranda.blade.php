@@ -783,7 +783,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Item-->
 											<div class="text-center">
 												<!--begin::Photo-->
-												<div class=" mx-auto mb-5 d-flex w-350px h-400px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/ptsp/ucapan ({{$x}}).jpeg')"></div>
+												<div class=" mx-auto mb-5 d-flex w-300px h-400px bgi-no-repeat bgi-size-contain bgi-position-center" style="background-image:url('assets/media/ptsp/ucapan ({{$x}}).jpeg')"></div>
 												<!--end::Photo-->
 												<!--begin::Person-->
 											
