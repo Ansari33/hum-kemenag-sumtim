@@ -117,6 +117,21 @@
       </ul>
     </li>
 
+    <li class="menu-item {{ (request()->is('cuti*') ) ? 'active open' : '' }}">
+      <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons bx bx-x-circle"></i>
+        <div class="text-truncate">{{ __('Cuti') }}</div>
+      </a>
+      <ul class="menu-sub">
+        <li class="menu-item {{ request()->routeIs('pengajuan-cuti*') ? 'active' : '' }}">
+          <a class="menu-link" href="{{ route('pengajuan-cuti') }}" wire:navigate>{{ __('Pengajuan') }}</a>
+        </li>
+        <li class="menu-item {{ request()->routeIs('jenis-cuti*') ? 'active' : '' }}">
+          <a class="menu-link" href="{{ route('jenis-cuti') }}" wire:navigate>{{ __('Jenis Cuti') }}</a>
+        </li>
+      </ul>
+    </li>
+
     <!-- <li class="menu-item {{ request()->is('laporan-kinerja*') ? 'active' : '' }}">
       <a class="menu-link" href="{{ route('laporan-kinerja') }}" wire:navigate> <i class="menu-icon tf-icons bx bx-check-double"></i>{{ __('Laporan Kinerja') }}</a>
     </li>

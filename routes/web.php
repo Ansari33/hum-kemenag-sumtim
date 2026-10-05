@@ -86,7 +86,6 @@ Route::middleware(['auth', 'verified'])->prefix('laporan-kinerja')->group(functi
   Volt::route('/', 'laporan-kinerja.index')->name('laporan-kinerja');
   Volt::route('add', 'laporan-kinerja.add')->name('laporan-kinerja.add');
   Volt::route('edit/{id}', 'laporan-kinerja.edit')->name('laporan-kinerja.edit');
-//  Route::get('/delete/{id}', [laporan-kinerjaController::class, 'delete'])->name('kegitatan.delete');
   Volt::route('/search', 'laporan-kinerja.search')->name('laporan-kinerja.search'); 
   Route::get('/pdf/{b}/{t}/{a}', [PegawaiController::class, 'pdf'])->name('laporan-kinerja.pdf');
    
@@ -104,6 +103,24 @@ Route::middleware(['auth', 'verified'])->prefix('laporan-kinerja')->group(functi
         Volt::route('/', 'berita.index')->name('berita');
         Volt::route('add', 'berita.add')->name('berita.add');
         Volt::route('edit/{id}', 'berita.edit')->name('berita.edit');
+        Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('data-informasi.delete');    
+    });
+    
+  });
+
+
+    Route::middleware(['auth', 'verified'])->prefix('cuti')->group(function () {
+      Route::prefix('pengajuan')->group(function () {
+        Volt::route('/', 'pengajuan-cuti.index')->name('pengajuan-cuti');
+        Volt::route('add', 'pengajuan-cuti.add')->name('pengajuan-cuti.add');
+        Volt::route('edit/{id}', 'pengajuan-cuti.edit')->name('pengajuan-cuti.edit');
+        Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('data-informasi.delete');    
+    });
+
+    Route::prefix('jenis')->group(function () {
+        Volt::route('/', 'jenis-cuti.index')->name('jenis-cuti');
+        Volt::route('add', 'jenis-cuti.add')->name('jenis-cuti.add');
+        Volt::route('edit/{id}', 'jenis-cuti.edit')->name('jenis-cuti.edit');
         Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('data-informasi.delete');    
     });
     
