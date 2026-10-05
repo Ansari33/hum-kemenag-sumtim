@@ -22,7 +22,7 @@ Route::prefix('profil')->group(function () {
 });
 
 Route::get('/unit-kerja', [LandingController::class, 'unitKerja'])->name('unit-kerja');
-Route::get('/berita', [LandingController::class, 'berita'])->name('berita');
+Route::get('/berita', [LandingController::class, 'berita'])->name('berita-list');
 Route::get('/berita/{judul}', [LandingController::class, 'bacaBerita'])->name('baca-berita');
 
 Route::prefix('informasi')->group(function () {
