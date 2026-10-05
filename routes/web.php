@@ -96,14 +96,14 @@ Route::middleware(['auth', 'verified'])->prefix('laporan-kinerja')->group(functi
         Volt::route('/', 'konten.index')->name('konten');
         Volt::route('add', 'konten.add')->name('konten.add');
         Volt::route('edit/{id}', 'konten.edit')->name('konten.edit');
-        Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('data-informasi.delete');    
+        Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('konten.delete');    
     });
 
     Route::prefix('berita')->group(function () {
         Volt::route('/', 'berita.index')->name('berita');
         Volt::route('add', 'berita.add')->name('berita.add');
         Volt::route('edit/{id}', 'berita.edit')->name('berita.edit');
-        Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('data-informasi.delete');    
+        Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('berita.delete');    
     });
     
   });
@@ -114,14 +114,14 @@ Route::middleware(['auth', 'verified'])->prefix('laporan-kinerja')->group(functi
         Volt::route('/', 'pengajuan-cuti.index')->name('pengajuan-cuti');
         Volt::route('add', 'pengajuan-cuti.add')->name('pengajuan-cuti.add');
         Volt::route('edit/{id}', 'pengajuan-cuti.edit')->name('pengajuan-cuti.edit');
-        Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('data-informasi.delete');    
+        Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('pengajuan-cuti.delete');    
     });
 
     Route::prefix('jenis')->group(function () {
         Volt::route('/', 'jenis-cuti.index')->name('jenis-cuti');
         Volt::route('add', 'jenis-cuti.add')->name('jenis-cuti.add');
         Volt::route('edit/{id}', 'jenis-cuti.edit')->name('jenis-cuti.edit');
-        Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('data-informasi.delete');    
+        Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('jenis-cuti.delete');    
     });
     
   });
@@ -152,7 +152,7 @@ Route::middleware(['auth', 'verified'])->prefix('laporan-kinerja')->group(functi
         Volt::route('/', 'pendidikan.index')->name('pendidikan');
         Volt::route('add', 'pendidikan.add')->name('pendidikan.add');
         Volt::route('edit/{id}', 'pendidikan.edit')->name('pendidikan.edit');
-        Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('data-informasi.delete');    
+        Route::get('/delete/{id}', [DataInformasiController::class, 'delete'])->name('pendidikan.delete');    
     });
     
   });
